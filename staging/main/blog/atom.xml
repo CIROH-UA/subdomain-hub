@@ -91,14 +91,14 @@ The NRDS is an automated numerical prediction system generating regular stream f
     </entry>
     <entry>
         <title type="html"><![CDATA[Expanding Access to NextGen Research through the CIROH Community NextGen Hub (CCNH) in Cloud]]></title>
-        <id>http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026</id>
-        <link href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026"/>
+        <id>http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026</id>
+        <link href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026"/>
         <updated>2026-03-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A cloud-based, ready-to-use environment that simplifies access to the NextGen water modeling framework for researchers.]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="opening-new-doors-for-research-with-the-nextgen-framework">Opening New Doors for Research with the NextGen Framework<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#opening-new-doors-for-research-with-the-nextgen-framework" class="hash-link" aria-label="Direct link to Opening New Doors for Research with the NextGen Framework" title="Direct link to Opening New Doors for Research with the NextGen Framework" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="opening-new-doors-for-research-with-the-nextgen-framework">Opening New Doors for Research with the NextGen Framework<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#opening-new-doors-for-research-with-the-nextgen-framework" class="hash-link" aria-label="Direct link to Opening New Doors for Research with the NextGen Framework" title="Direct link to Opening New Doors for Research with the NextGen Framework" translate="no">​</a></h2>
 <p>The NextGen framework holds great potential for hydrologic modeling, but is often inaccessible due to its strenuous setup and requirements. As such, embedding it within a cloud-based framework offers a natural solution to this problem by removing some of the administrative and technical requirements for compute resource setup and computational library configuration, thus opening the door for a wider audience to tke advantage of the strengths of the framework.</p>
 <p>With the <strong>CIROH Community NextGen Hub (CCNH)</strong>, we’ve created a cloud-based environment that addresses exactly those setup challenges, so users can focus on science instead of software.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-preconfigured-ready-to-use-cloud-environment">A Preconfigured, Ready-to-Use Cloud Environment<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#a-preconfigured-ready-to-use-cloud-environment" class="hash-link" aria-label="Direct link to A Preconfigured, Ready-to-Use Cloud Environment" title="Direct link to A Preconfigured, Ready-to-Use Cloud Environment" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-preconfigured-ready-to-use-cloud-environment">A Preconfigured, Ready-to-Use Cloud Environment<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#a-preconfigured-ready-to-use-cloud-environment" class="hash-link" aria-label="Direct link to A Preconfigured, Ready-to-Use Cloud Environment" title="Direct link to A Preconfigured, Ready-to-Use Cloud Environment" translate="no">​</a></h2>
 <p>CCNH is a containerized, cloud-based modeling environment hosted on the <a href="https://ciroh.awi.2i2c.cloud/" target="_blank" rel="noopener noreferrer" class="">CIROH-2i2c JupyterHub</a>. It packages everything a researcher needs to run end-to-end NextGen workflows — from input preprocessing through model execution, calibration, evaluation, and output visualization — into a single, ready-to-use JupyterHub image.
 Built on the same containerization patterns as NGIAB, CCNH leverages a Pangeo base image and includes:</p>
 <ul>
@@ -108,12 +108,12 @@ Built on the same containerization patterns as NGIAB, CCNH leverages a Pangeo ba
 <li class=""><strong>SPOTPY</strong>(Statistical Parameter Optimization Tool for Python) for model calibration</li>
 <li class=""><strong>TEEHR</strong>(Tools for Exploratory Evaluation in Hydrologic Research) for performance evaluation</li>
 <li class=""><strong>PyNGIAB</strong>, a Python wrapper that lets you run NextGen simulations directly from Jupyter notebooks</li>
-<li class=""><strong>HydroShare integration tools</strong> (nbfetch, hs_files-jupyter, hsclient) for seamless data exchange</li>
+<li class=""><strong>HydroShare integration tools</strong> (nbfetch, hs_files-jupyter, hsclient) for seamless data exchange to save results in HydroShare for collaboration, reproducibility and publishing</li>
 <li class=""><strong>JupyterLab</strong> with distributed computing capabilities for interactive, scalable workflows</li>
 </ul>
 <figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/main/img/blog/2026-03-ccnh/diagram.png" width="60%" alt="Diagram illustrating how HydroShare resources, 2i2c JupyterHub, and S3 Object Store interact to enable streamlined NextGen workflows in the cloud."><figcaption><em>Diagram illustrating how HydroShare resources, 2i2c JupyterHub, and S3 Object Store interact to enable streamlined NextGen workflows in the cloud.</em></figcaption></figure>
 <p>The result: researchers can go from zero to running a calibrated NextGen simulation in a fraction of the time previously required.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streamlined-workflow-clear-results">Streamlined Workflow, Clear Results<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#streamlined-workflow-clear-results" class="hash-link" aria-label="Direct link to Streamlined Workflow, Clear Results" title="Direct link to Streamlined Workflow, Clear Results" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streamlined-workflow-clear-results">Streamlined Workflow, Clear Results<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#streamlined-workflow-clear-results" class="hash-link" aria-label="Direct link to Streamlined Workflow, Clear Results" title="Direct link to Streamlined Workflow, Clear Results" translate="no">​</a></h2>
 <p>Through guided notebooks, users can:</p>
 <ul>
 <li class="">Prepare and subset input data</li>
@@ -123,13 +123,13 @@ Built on the same containerization patterns as NGIAB, CCNH leverages a Pangeo ba
 <li class="">Explore outputs interactively</li>
 </ul>
 <p>...all within a single environment designed for efficiency and discovery.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-it-matters">Why It Matters<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#why-it-matters" class="hash-link" aria-label="Direct link to Why It Matters" title="Direct link to Why It Matters" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-it-matters">Why It Matters<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#why-it-matters" class="hash-link" aria-label="Direct link to Why It Matters" title="Direct link to Why It Matters" translate="no">​</a></h2>
 <p>By lowering technical barriers and using a cloud-based approach, CCNH makes NextGen accessible to a broader research community.
 It allows scientists to spend less time on setup and more time advancing hydrologic understanding.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-access-ccnh">How to Access CCNH<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#how-to-access-ccnh" class="hash-link" aria-label="Direct link to How to Access CCNH" title="Direct link to How to Access CCNH" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-access-ccnh">How to Access CCNH<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#how-to-access-ccnh" class="hash-link" aria-label="Direct link to How to Access CCNH" title="Direct link to How to Access CCNH" translate="no">​</a></h2>
 <img src="http://ciroh.org/staging/main/img/blog/2026-03-ccnh/screenshot.png" width="100%" alt="Picture of the CIROH-2i2c JupyterHub interface showing the Server Options page where users can select compute profiles and the CCNH image to launch a NextGen modeling environment in the cloud.">
 <p>There are two primary ways to launch CCNH in the CIROH-2i2c JupyterHub environment:</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-1-launch-directly-from-ciroh-2i2c-jupyterhub">Option 1: Launch Directly from CIROH-2i2c JupyterHub<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#option-1-launch-directly-from-ciroh-2i2c-jupyterhub" class="hash-link" aria-label="Direct link to Option 1: Launch Directly from CIROH-2i2c JupyterHub" title="Direct link to Option 1: Launch Directly from CIROH-2i2c JupyterHub" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-1-launch-directly-from-ciroh-2i2c-jupyterhub">Option 1: Launch Directly from CIROH-2i2c JupyterHub<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#option-1-launch-directly-from-ciroh-2i2c-jupyterhub" class="hash-link" aria-label="Direct link to Option 1: Launch Directly from CIROH-2i2c JupyterHub" title="Direct link to Option 1: Launch Directly from CIROH-2i2c JupyterHub" translate="no">​</a></h3>
 <ol>
 <li class="">Go to: <a href="https://ciroh.awi.2i2c.cloud/" target="_blank" rel="noopener noreferrer" class="">https://ciroh.awi.2i2c.cloud/</a></li>
 <li class="">Click <strong>“Login to continue”</strong> and authenticate with your CIROH credentials. (If this is your first time, you may be prompted to authorize access through GitHub.)</li>
@@ -142,10 +142,10 @@ It allows scientists to spend less time on setup and more time advancing hydrolo
 <li class="">Click <strong>Start</strong> to launch the JupyterHub.</li>
 </ol>
 <p>You are now inside a CIROH 2i2c JupyterHub session running the CCNH image, which provides a fully configured NextGen modeling environment.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-2-launch-from-a-hydroshare-resource-open-with">Option 2: Launch from a HydroShare Resource (“Open With”)<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#option-2-launch-from-a-hydroshare-resource-open-with" class="hash-link" aria-label="Direct link to Option 2: Launch from a HydroShare Resource (“Open With”)" title="Direct link to Option 2: Launch from a HydroShare Resource (“Open With”)" translate="no">​</a></h3>
-<p>One of the most powerful features of CIROH-2i2c JupyterHub is its <a href="https://docs.ciroh.org/ciroh_hub_staging/docs/services/cloudservices/2i2c/hydroshare-integration" target="_blank" rel="noopener noreferrer" class="">integration with HydroShare</a>. You can open a HydroShare resource directly in a CIROH-2i2c JupyterHub session running the CCNH image:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-2-launch-from-a-hydroshare-resource-open-with">Option 2: Launch from a HydroShare Resource (“Open With”)<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#option-2-launch-from-a-hydroshare-resource-open-with" class="hash-link" aria-label="Direct link to Option 2: Launch from a HydroShare Resource (“Open With”)" title="Direct link to Option 2: Launch from a HydroShare Resource (“Open With”)" translate="no">​</a></h3>
+<p>One of the most powerful features of CIROH-2i2c JupyterHub is its <a href="https://hub.ciroh.org/ciroh_hub_staging/docs/services/cloudservices/2i2c/hydroshare-integration" target="_blank" rel="noopener noreferrer" class="">integration with HydroShare</a>. You can open a HydroShare resource directly in a CIROH-2i2c JupyterHub session running the CCNH image:</p>
 <ol>
-<li class="">Navigate to a HydroShare resource (for example: <a href="https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/" target="_blank" rel="noopener noreferrer" class="">https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/</a>)</li>
+<li class="">Navigate to a HydroShare resource. (for example: <a href="https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/" target="_blank" rel="noopener noreferrer" class="">https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/</a>)</li>
 <li class="">Click <strong>Open With</strong>  (top-right of the resource page) and select <strong>CIROH-2i2c JupyterHub</strong>.</li>
 <li class="">Click <strong>“Login to continue”</strong> and authenticate with your CIROH credentials. (If this is your first time, you may be prompted to authorize access through GitHub.)</li>
 <li class="">On the <strong>Server Options</strong> page:<!-- -->
@@ -155,8 +155,9 @@ It allows scientists to spend less time on setup and more time advancing hydrolo
 </ul>
 </li>
 <li class="">Click <strong>Start</strong> to launch the JupyterHub.</li>
+<li class="">(If you did this with the example resource above, click on and launch one of the Jupyter Notebooks to step through the NextGen workflows.)</li>
 </ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-april-2026#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="http://ciroh.org/staging/main/blog/ciroh-ccnh-nextgen-march-2026#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
 <ul>
 <li class="">Nassar, A., Tarboton, D., Baig, F., Cunningham, J., Patel, A., Halgren, J., Lee, B., Salehabadi, H., Castronova, A., and Garousi-Nejad, I. "Accelerating community research applications of the NextGen water modeling framework through CUAHSI HydroShare linked with CIROH-2i2c JupyterHub." <em>Environmental Modelling &amp; Software</em>. (In-review)</li>
 <li class="">Nassar, A., Tarboton, D., Baig, F., Patel, A., Cunningham, J., and Salehabadi, H. (2026). NextGen Water Modeling Workflow for Research-Scale Applications. <a href="https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c" target="_blank" rel="noopener noreferrer" class="">https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c</a></li>
