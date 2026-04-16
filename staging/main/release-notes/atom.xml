@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ciroh.org/staging/main/release-notes</id>
     <title>CIROH Hub Blog</title>
-    <updated>2026-03-30T00:00:00.000Z</updated>
+    <updated>2026-04-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ciroh.org/staging/main/release-notes"/>
     <subtitle>CIROH Hub Blog</subtitle>
     <icon>http://ciroh.org/staging/main/img/logos/CIROH_Hub_logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[04-15-2026 Release Notes]]></title>
+        <id>http://ciroh.org/staging/main/release-notes/v20260415</id>
+        <link href="http://ciroh.org/staging/main/release-notes/v20260415"/>
+        <updated>2026-04-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Major CIROH Hub update for April!]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content">New content<a href="http://ciroh.org/staging/main/release-notes/v20260415#new-content" class="hash-link" aria-label="Direct link to New content" title="Direct link to New content" translate="no">​</a></h2>
+<ul>
+<li class="">Fully revamped NextGen on CIROH-2i2c tutorial (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/108" target="_blank" rel="noopener noreferrer" class="">#108</a>)</li>
+<li class="">Added featured resource carousels to Research Portal pages (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/98" target="_blank" rel="noopener noreferrer" class="">#98</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="http://ciroh.org/staging/main/release-notes/v20260415#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
+<ul>
+<li class="">Updated YouTube tutorial embeds in 2i2c guides (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/106" target="_blank" rel="noopener noreferrer" class="">#106</a>)</li>
+<li class="">Updated Infrastructure Access and other IT Services pages to link to the latest processes and request forms (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/105" target="_blank" rel="noopener noreferrer" class="">#105</a>, <a href="https://github.com/CIROH-UA/ciroh_hub/pull/100" target="_blank" rel="noopener noreferrer" class="">#100</a>)</li>
+</ul>
+]]></content>
+        <category label="Release Notes" term="Release Notes"/>
+        <category label="CIROH Hub" term="CIROH Hub"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[03-30-2026 Release Notes]]></title>
         <id>http://ciroh.org/staging/main/release-notes/v20260330</id>
@@ -411,24 +431,6 @@ As such, this and all prior release notes refer to DocuHub changes and are retai
 <li class="">Moved several NGIAB tutorials to a new, generalized header (<a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/415" target="_blank" rel="noopener noreferrer" class="">#415</a>)</li>
 <li class="">Added "CIROH Research Cyberinfrastructure" video to <a class="" href="http://ciroh.org/staging/main/docs/services/intro">Services</a> landing page (<a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/413" target="_blank" rel="noopener noreferrer" class="">#413</a>)</li>
 <li class="">Improvements to CI/CD pipelining (<a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/409" target="_blank" rel="noopener noreferrer" class="">#409</a>, <a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/395" target="_blank" rel="noopener noreferrer" class="">#395</a>)</li>
-</ul>]]></content>
-        <category label="Release Notes" term="Release Notes"/>
-        <category label="CIROH Hub" term="CIROH Hub"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[05-27-2025 Release Notes]]></title>
-        <id>http://ciroh.org/staging/main/release-notes/v20250527</id>
-        <link href="http://ciroh.org/staging/main/release-notes/v20250527"/>
-        <updated>2025-05-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Major CIROH Hub update for May 2025!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content">New content<a href="http://ciroh.org/staging/main/release-notes/v20250527#new-content" class="hash-link" aria-label="Direct link to New content" title="Direct link to New content" translate="no">​</a></h2>
-<ul>
-<li class="">Added NextGen on CIROH-2i2c JupyterHub to Products section (<a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/404" target="_blank" rel="noopener noreferrer" class="">#404</a>)</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="http://ciroh.org/staging/main/release-notes/v20250527#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
-<ul>
-<li class="">Updated CIROH Portal under Products section with tables, emojis, and grammar fixes (<a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/403" target="_blank" rel="noopener noreferrer" class="">#403</a>)</li>
-<li class="">Updated documentation for "FIM Database for Multi-Model Visualization" (<a href="https://github.com/CIROH-UA/ciroh-ua_website/pull/402" target="_blank" rel="noopener noreferrer" class="">#402</a>)</li>
 </ul>]]></content>
         <category label="Release Notes" term="Release Notes"/>
         <category label="CIROH Hub" term="CIROH Hub"/>
