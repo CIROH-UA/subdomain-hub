@@ -20,10 +20,13 @@
 <ul>
 <li class="">What if we want to compare many models against each other?</li>
 <li class="">What if we want to analyze thousands of locations with 40-years of hourly timestep data at the continental scale?</li>
-<li class="">What if we want to interrogate the data with questions like:
-o	“How does performance during high-flow events compare to low-flow events?”
-o	“How does model performance relate to physical basin attributes?”
-o	“What's the uncertainty associated with the resulting metrics?”</li>
+<li class="">What if we want to interrogate the data with questions like:<!-- -->
+<ul>
+<li class="">“How does performance during high-flow events compare to low-flow events?”</li>
+<li class="">“How does model performance relate to physical basin attributes?”</li>
+<li class="">“What's the uncertainty associated with the resulting metrics?”</li>
+</ul>
+</li>
 <li class="">What if we want to make the data easily accessible to the hydrologic community to support both historical and near-real time analyses?</li>
 </ul>
 <p>These are the challenges TEEHR is designed to address.</p>
@@ -37,7 +40,7 @@ o	“What's the uncertainty associated with the resulting metrics?”</li>
 <figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/120/img/blog/2026-04-teehr/fig3.png" width="100%" alt="A suite of services in the evaluation manager enables real-time ingests, web-based dashboards, interactive exploration, and more."><figcaption><em>A suite of services in the evaluation manager enables real-time ingests, web-based dashboards, interactive exploration, and more.</em></figcaption></figure>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="teehr-python">TEEHR-Python<a href="http://ciroh.org/staging/120/blog/teehr-april-2026#teehr-python" class="hash-link" aria-label="Direct link to TEEHR-Python" title="Direct link to TEEHR-Python" translate="no">​</a></h3>
 <p>TEEHR-Python is the analytics engine that puts this data to work. Powered by PySpark for scalable, distributed compute and Apache Iceberg for robust data management — including time travel, upsert/append/delete operations, schema evolution, and ACID transactions — it gives analysts the full power of modern data engineering in a hydrologic context. An ever-growing suite of signature, deterministic, and probabilistic metrics, with sampling uncertainty estimation built-in, means users can interrogate model performance in ways that simply weren't easily accessible before.  TEEHR-Python is still a python package that users can install in their own environment via <code>pip install teehr</code> to use with their own data and to access datasets in the TEEHR-Cloud data warehouse.</p>
-<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/120/img/blog/2026-04-teehr/fig4.png" width="100%" alt="TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics."><figcaption><em>TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics.</em></figcaption></figure>
+<figure style="text-align:center;width:110%;margin-left:0%"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/120/img/blog/2026-04-teehr/fig4.png" width="100%" alt="TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics."><figcaption><em>TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics.</em></figcaption></figure>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-are-the-teehr-cloud-dashboards">What are the TEEHR-Cloud Dashboards?<a href="http://ciroh.org/staging/120/blog/teehr-april-2026#what-are-the-teehr-cloud-dashboards" class="hash-link" aria-label="Direct link to What are the TEEHR-Cloud Dashboards?" title="Direct link to What are the TEEHR-Cloud Dashboards?" translate="no">​</a></h3>
 <p>Several web-based dashboards, currently in development, allow users to view and interact with the data warehouse from application-specific perspectives. The two active dashboards include more general retrospective model comparisons and forecast analysis, while other, more application-specific, dashboards in development will focus on:</p>
 <ul>
@@ -53,7 +56,8 @@ o	“What's the uncertainty associated with the resulting metrics?”</li>
 <p>The TEEHR framework is under active development, as we continue to expand historical and real-time data ingests, application-specific dashboards, and core TEEHR-Python functionality. To learn more about TEEHR the <a href="https://rtiinternational.github.io/teehr/" target="_blank" rel="noopener noreferrer" class="">documentation</a> is a good place to start (link below). If you want to ask a question, request a change or new feature, or report a bug, you can reach out through the CIROH #teehr slack channel, by creating an issue on the <a href="https://github.com/RTIInternational/teehr" target="_blank" rel="noopener noreferrer" class="">TEEHR github repos</a>, or by contacting us directly. Thanks for reading!</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="additional-links">Additional Links:<a href="http://ciroh.org/staging/120/blog/teehr-april-2026#additional-links" class="hash-link" aria-label="Direct link to Additional Links:" title="Direct link to Additional Links:" translate="no">​</a></h3>
 <ul>
-<li class="">Documentation: <a href="https://rtiinternational.github.io/teehr/" target="_blank" rel="noopener noreferrer" class="">https://rtiinternational.github.io/teehr/</a></li>
+<li class="">Documentation: <a href="https://hub.ciroh.org/docs/products/evaluation/rtiteehr/" target="_blank" rel="noopener noreferrer" class="">https://hub.ciroh.org/docs/products/evaluation/rtiteehr/</a></li>
+<li class="">TEEHR documentation: <a href="https://rtiinternational.github.io/teehr/" target="_blank" rel="noopener noreferrer" class="">https://rtiinternational.github.io/teehr/</a></li>
 <li class="">Dashboards (in-development): <a href="https://dashboards.teehr.rtiamanzi.org/" target="_blank" rel="noopener noreferrer" class="">https://dashboards.teehr.rtiamanzi.org/</a></li>
 <li class="">TEEHR repo: <a href="https://github.com/RTIInternational/teehr" target="_blank" rel="noopener noreferrer" class="">https://github.com/RTIInternational/teehr</a></li>
 <li class="">TEEHR-Cloud repo: <a href="https://github.com/RTIInternational/teehr-hub" target="_blank" rel="noopener noreferrer" class="">https://github.com/RTIInternational/teehr-hub</a></li>
