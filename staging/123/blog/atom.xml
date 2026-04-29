@@ -2,11 +2,86 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ciroh.org/staging/123/blog</id>
     <title>CIROH Hub Blog</title>
-    <updated>2026-03-25T00:00:00.000Z</updated>
+    <updated>2026-04-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ciroh.org/staging/123/blog"/>
     <subtitle>CIROH Hub Blog</subtitle>
     <icon>http://ciroh.org/staging/123/img/logos/CIROH_Hub_logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[TEEHR and CIROH Advance Cloud-Based Hydrologic Model Evaluation into a New Era]]></title>
+        <id>http://ciroh.org/staging/123/blog/teehr-april-2026</id>
+        <link href="http://ciroh.org/staging/123/blog/teehr-april-2026"/>
+        <updated>2026-04-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TEEHR advances hydrologic model evaluation at scale by combining a cloud-based data platform and a Python analytics package built for large, iterative analysis across models, locations, and time periods]]></summary>
+        <content type="html"><![CDATA[<p>CIROH is advancing hydrologic model evaluation into a new era. Led by a core team of developers and scientists at RTI, with testing and contributions from others across the consortium, we've built TEEHR — a system purpose-built for evaluating models at scale. Combining novel approaches to data analytics with cutting-edge open data infrastructure, TEEHR enables a truly complete picture of model and forecast performance across datasets, sites, historical time periods, and forecast horizons.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-do-we-need-teehr">Why do we need TEEHR?<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#why-do-we-need-teehr" class="hash-link" aria-label="Direct link to Why do we need TEEHR?" title="Direct link to Why do we need TEEHR?" translate="no">​</a></h2>
+<p>TEEHR is built on a fundamental question: “Which hydrologic model is better?”. At its simplest, this can seem trivial; the model simulation is paired with observations, a few performance metrics are calculated, and you're on your way to a common performance analysis. Things can start to get more complicated if want to go larger, dig deeper or ask more nuanced questions:</p>
+<ul>
+<li class="">What if we want to compare many models against each other?</li>
+<li class="">What if we want to analyze thousands of locations with 40-years of hourly timestep data at the continental scale?</li>
+<li class="">What if we want to interrogate the data with questions like:<!-- -->
+<ul>
+<li class="">“How does performance during high-flow events compare to low-flow events?”</li>
+<li class="">“How does model performance relate to physical basin attributes?”</li>
+<li class="">“What's the uncertainty associated with the resulting metrics?”</li>
+</ul>
+</li>
+<li class="">What if we want to make the data easily accessible to the hydrologic community to support both historical and near-real time analyses?</li>
+</ul>
+<p>These are the challenges TEEHR is designed to address.</p>
+<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/123/img/blog/2026-04-teehr/fig1.png" width="100%" alt="TEEHR is optimized for large-scale iterative model interrogation and data management."><figcaption><em>TEEHR is optimized for large-scale iterative model interrogation and data management</em></figcaption></figure>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-teehr">What is TEEHR?<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#what-is-teehr" class="hash-link" aria-label="Direct link to What is TEEHR?" title="Direct link to What is TEEHR?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-teehr-framework">The TEEHR Framework<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#the-teehr-framework" class="hash-link" aria-label="Direct link to The TEEHR Framework" title="Direct link to The TEEHR Framework" translate="no">​</a></h3>
+<p>TEEHR began as a Python package enabling robust and iterative evaluation of hydrologic models.  It has since expanded into a cloud-based platform (TEEHR-Cloud) consisting of a high-performance data warehouse optimized for huge analytic tables, a suite of cloud-based services supporting data exploration, automated processing and data ingests, and web-hosted interactive dashboards.</p>
+<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/123/img/blog/2026-04-teehr/fig2.png" width="60%" alt="The TEEHR-Cloud framework consists of a high-performance data warehouse, cloud-based evaluation manager, and an installable Python package"><figcaption><em>The TEEHR-Cloud framework consists of a high-performance data warehouse, cloud-based evaluation manager, and an installable Python package</em></figcaption></figure>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="teehr-cloud">TEEHR-Cloud<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#teehr-cloud" class="hash-link" aria-label="Direct link to TEEHR-Cloud" title="Direct link to TEEHR-Cloud" translate="no">​</a></h3>
+<p>TEEHR-Cloud delivers evaluation-ready insights and datasets that are publicly available and continuously updated — including 40 years of hourly retrospective streamflow simulations across more than 8,000 gage sites, model forcings summarized to drainage basins (mean areal precipitation and temperature), and a real-time evaluation manager for live data ingestion and analysis of operational NWM, RFC forecasts and CIROH’s NextGen Research Data Stream (NRDS). It's all built on Apache Iceberg, an open table format designed for the demands of big data at scale and proven by well-known big data industries (e.g., Netflix).</p>
+<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/123/img/blog/2026-04-teehr/fig3.png" width="100%" alt="A suite of services in the evaluation manager enables real-time ingests, web-based dashboards, interactive exploration, and more."><figcaption><em>A suite of services in the evaluation manager enables real-time ingests, web-based dashboards, interactive exploration, and more.</em></figcaption></figure>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="teehr-python">TEEHR-Python<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#teehr-python" class="hash-link" aria-label="Direct link to TEEHR-Python" title="Direct link to TEEHR-Python" translate="no">​</a></h3>
+<p>TEEHR-Python is the analytics engine that puts this data to work. Powered by PySpark for scalable, distributed compute and Apache Iceberg for robust data management — including time travel, upsert/append/delete operations, schema evolution, and ACID transactions — it gives analysts the full power of modern data engineering in a hydrologic context. An ever-growing suite of signature, deterministic, and probabilistic metrics, with sampling uncertainty estimation built-in, means users can interrogate model performance in ways that simply weren't easily accessible before.  TEEHR-Python is still a Python package that users can install in their own environment via <code>pip install teehr</code> to use with their own data and to access datasets in the TEEHR-Cloud data warehouse.</p>
+<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/123/img/blog/2026-04-teehr/fig4.png" width="100%" alt="TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics."><figcaption><em>TEEHR-Python consists of tools supporting data fetching and loading, validation and storage, and robust analytics.</em></figcaption></figure>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-are-the-teehr-cloud-dashboards">What are the TEEHR-Cloud Dashboards?<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#what-are-the-teehr-cloud-dashboards" class="hash-link" aria-label="Direct link to What are the TEEHR-Cloud Dashboards?" title="Direct link to What are the TEEHR-Cloud Dashboards?" translate="no">​</a></h3>
+<p>Several web-based dashboards, currently in development, allow users to view and interact with the data warehouse from application-specific perspectives. The two active dashboards include more general retrospective model comparisons and forecast analysis, while other, more application-specific, dashboards in development will focus on:</p>
+<ul>
+<li class="">Operational forecast (NWM, RFC) diagnostic and event-based evaluation</li>
+<li class="">Multi-model intercomparison to baselines with uncertainty</li>
+<li class="">Ensemble water supply forecasts</li>
+<li class="">Forecast Informed Reservoir Operations (FIRO)</li>
+<li class="">Flash flood forecasts</li>
+<li class="">Low flow forecasts</li>
+</ul>
+<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/123/img/blog/2026-04-teehr/fig5.png" width="100%" alt="Screen capture of the retrospective model comparison dashboard"><figcaption><em>Screen capture of the retrospective model comparison dashboard</em></figcaption></figure>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>The TEEHR framework is under active development, as we continue to expand historical and real-time data ingests, application-specific dashboards, and core TEEHR-Python functionality. To learn more about TEEHR, the <a href="https://rtiinternational.github.io/teehr/" target="_blank" rel="noopener noreferrer" class="">documentation</a> is a good place to start (link below). If you want to ask a question, request a change or new feature, or report a bug, you can reach out through the CIROH #teehr slack channel, by creating an issue on the <a href="https://github.com/RTIInternational/teehr" target="_blank" rel="noopener noreferrer" class="">TEEHR GitHub repos</a>, or by contacting us directly. Thanks for reading!</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="additional-links">Additional Links:<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#additional-links" class="hash-link" aria-label="Direct link to Additional Links:" title="Direct link to Additional Links:" translate="no">​</a></h3>
+<ul>
+<li class="">Documentation: <a href="https://hub.ciroh.org/docs/products/evaluation/rtiteehr/" target="_blank" rel="noopener noreferrer" class="">https://hub.ciroh.org/docs/products/evaluation/rtiteehr/</a></li>
+<li class="">TEEHR documentation: <a href="https://rtiinternational.github.io/teehr/" target="_blank" rel="noopener noreferrer" class="">https://rtiinternational.github.io/teehr/</a></li>
+<li class="">Dashboards (in-development): <a href="https://dashboards.teehr.rtiamanzi.org/" target="_blank" rel="noopener noreferrer" class="">https://dashboards.teehr.rtiamanzi.org/</a></li>
+<li class="">TEEHR repo: <a href="https://github.com/RTIInternational/teehr" target="_blank" rel="noopener noreferrer" class="">https://github.com/RTIInternational/teehr</a></li>
+<li class="">TEEHR-Cloud repo: <a href="https://github.com/RTIInternational/teehr-hub" target="_blank" rel="noopener noreferrer" class="">https://github.com/RTIInternational/teehr-hub</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="our-team">Our Team<a href="http://ciroh.org/staging/123/blog/teehr-april-2026#our-team" class="hash-link" aria-label="Direct link to Our Team" title="Direct link to Our Team" translate="no">​</a></h2>
+<section class="grid_dswN" aria-label="Author profiles"><article class="card_eIx_"><img class="avatar_Hy6q" src="http://ciroh.org/staging/123/img/profiles/Matthew_Denno.jpg" alt="Matthew Denno (PI) profile photo" loading="lazy"><div class="content_MZL4"><h3 class="name_tQs4">Matthew Denno (PI)</h3><p class="title_YsdW">Lead Software Developer</p><p class="organization_zZwt">RTI International</p><a class="email_dfwk" href="mailto:mdenno@rti.org">mdenno@rti.org</a></div></article><article class="card_eIx_"><img class="avatar_Hy6q" src="http://ciroh.org/staging/123/img/profiles/Katie_Werkhoven.jpg" alt="Katie van Werkhoven profile photo" loading="lazy"><div class="content_MZL4"><h3 class="name_tQs4">Katie van Werkhoven</h3><p class="title_YsdW">Lead Science Advisor</p><p class="organization_zZwt">RTI International</p><a class="email_dfwk" href="mailto:kvanwerkhoven@rti.org">kvanwerkhoven@rti.org</a></div></article><article class="card_eIx_"><img class="avatar_Hy6q" src="http://ciroh.org/staging/123/img/profiles/Sam_Lamont.jpg" alt="Sam Lamont profile photo" loading="lazy"><div class="content_MZL4"><h3 class="name_tQs4">Sam Lamont</h3><p class="title_YsdW">Lead Software Developer</p><p class="organization_zZwt">RTI International</p><a class="email_dfwk" href="mailto:slamont@rti.org">slamont@rti.org</a></div></article><article class="card_eIx_"><img class="avatar_Hy6q" src="http://ciroh.org/staging/123/img/profiles/Sam_Landsteiner.png" alt="Sam Landsteiner profile photo" loading="lazy"><div class="content_MZL4"><h3 class="name_tQs4">Sam Landsteiner</h3><p class="title_YsdW">Software Developer</p><p class="organization_zZwt">RTI International</p><a class="email_dfwk" href="mailto:slandsteiner@rti.org">slandsteiner@rti.org</a></div></article></section>]]></content>
+        <author>
+            <name>Sam Lamont</name>
+            <uri>https://www.linkedin.com/in/sam-lamont-3a972813/</uri>
+        </author>
+        <author>
+            <name>Matthew Denno</name>
+            <uri>https://www.linkedin.com/in/matthew-denno-pe-9b9316a/</uri>
+        </author>
+        <author>
+            <name>Katie van Werkhoven</name>
+            <uri>https://www.linkedin.com/in/katievanwerkhoven/</uri>
+        </author>
+        <author>
+            <name>Sam Landsteiner</name>
+            <uri>https://www.linkedin.com/in/sam-landsteiner-00752913/</uri>
+        </author>
+        <category label="CIROH" term="CIROH"/>
+        <category label="TEEHR" term="TEEHR"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The NextGen Research DataStream (NRDS): A Reproducible Numerical Prediction System for Accelerating Research to Operations in Hydrology]]></title>
         <id>http://ciroh.org/staging/123/blog/nextgen-research-datastream-april-2026</id>
@@ -19,6 +94,7 @@
 To evaluate each of these modeling concepts, NRDS deploys prototype models to generate a continuous “datastream”. These outputs can then be evaluated and made more accurate. This cycle of streamlined deployment and iterative design lets these prototypes mature into a product that can be picked up by an operational forecasting team.</p>
 <p>To enable this process to be done rapidly and smoothly, the entire system is designed with reproducibility and iterative improvement as core principles.
 The NRDS is an automated numerical prediction system generating regular stream flow forecasts that uses the NextGen Water Resources Modeling Framework (NextGen) as the core modeling engine and NextGen In A Box (NGIAB) as the simulation environment. This system generates forecasts across the contiguous United States (CONUS) on CIROH's operational cyberinfrastructure backbone: the research-to-operations (R2O) Hybrid Cloud (R2OHC) platform, with deployment on the AWS cloud. What makes the NRDS exciting is that the entire system is open-sourced, reproducible, publicly browsable, and potentially editable by anyone in the hydrologic community.</p>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-the-nrds-matters">Why the NRDS Matters<a href="http://ciroh.org/staging/123/blog/nextgen-research-datastream-april-2026#why-the-nrds-matters" class="hash-link" aria-label="Direct link to Why the NRDS Matters" title="Direct link to Why the NRDS Matters" translate="no">​</a></h2>
 <p>For decades, operational hydrologic modeling has been a largely closed process. National-scale models like the National Water Model (NWM) are developed and maintained by federal agencies where HPC access is limited. While these models frequently produce insights and forecasts of excellent quality, the simulations themselves have proven difficult to reproduce and improve upon from within the hydrologic research community, hindering the knowledge flow from research to operations. By contrast, the NRDS is totally public and open. This provides both researchers and national agencies with immediate access, reducing the latency between the discovery of new and potentially valuable knowledge and its operational implementation.</p>
 <p>Deployed on AWS cloud from the <a href="https://github.com/CIROH-UA/ngen-datastream" target="_blank" rel="noopener noreferrer" class="">ngen-datastream repository</a>, the NRDS regularly ingests meteorological forcing data, processes it through the NextGen framework using community-configured parameters, and produces streamflow predictions for river reaches across the country. The forcing data, model configuration, infrastructure, and simulation outputs are all publicly available through the <a href="https://datastream.ciroh.org/index.html" target="_blank" rel="noopener noreferrer" class="">NRDS S3 data portal</a> and the <a href="http://nrds.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">NRDS visualizer</a>. Researchers can browse the results, compare them against observations, and reproduce or run their own simulations with the exact tooling that supports the NRDS. This transparency and usability enables researchers to readily propose improvements to any component of the NRDS system stack.</p>
@@ -113,6 +189,7 @@ Built on the same containerization patterns as NGIAB, CCNH leverages a Pangeo ba
 </ul>
 <figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/123/img/blog/2026-03-ccnh/diagram.png" width="60%" alt="Diagram illustrating how HydroShare resources, 2i2c JupyterHub, and S3 Object Store interact to enable streamlined NextGen workflows in the cloud."><figcaption><em>Diagram illustrating how HydroShare resources, 2i2c JupyterHub, and S3 Object Store interact to enable streamlined NextGen workflows in the cloud.</em></figcaption></figure>
 <p>The result: researchers can go from zero to running a calibrated NextGen simulation in a fraction of the time previously required.</p>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streamlined-workflow-clear-results">Streamlined Workflow, Clear Results<a href="http://ciroh.org/staging/123/blog/ciroh-ccnh-nextgen-march-2026#streamlined-workflow-clear-results" class="hash-link" aria-label="Direct link to Streamlined Workflow, Clear Results" title="Direct link to Streamlined Workflow, Clear Results" translate="no">​</a></h2>
 <p>Through guided notebooks, users can:</p>
 <ul>
@@ -1532,61 +1609,5 @@ It’s an exciting time for CIROH, and we’re thrilled to be a part of this dyn
         <category label="On-Premises Services" term="On-Premises Services"/>
         <category label="DocuHub" term="DocuHub"/>
         <category label="CIROH Portal" term="CIROH Portal"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Application of NOAA-OWP's NextGen Framework: DevCon 2025 and EWRI Congress 2025 Highlights]]></title>
-        <id>http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab</id>
-        <link href="http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab"/>
-        <updated>2025-06-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A recap of presentations and workshops from the 2025 EWRI Congress and CIROH Developers Conference, focusing on the practical application of the NOAA-OWP NextGen Framework.]]></summary>
-        <content type="html"><![CDATA[<div style="text-align:center"><p><img decoding="async" loading="lazy" alt="AWI Science and Technology Team @ CIROH DevCon2025" src="http://ciroh.org/staging/123/assets/images/DevCon_AWI_Team-c9f08b48601493edf8e47d7478fdcfff.png" width="1574" height="1414" class="img_ev3q"></p></div>
-<blockquote>
-<p><em>CIROH-AWI Science and Technology Team.</em> <br>
-<em>Left to right: Sagy Cohen, Steven Burian, Manjila Singh, Saide Zand, Savalan N. Neisary, Arpita Patel, Nia Minor, Trupesh Patel, Sifan A. Koriche, Jonathan Frame, Reza S. Alipour, Hari T. Jajula, Chad Perry; Josh Cunningham.</em></p>
-</blockquote>
-<p>May was a pivotal month for representing the <a href="https://ciroh.ua.edu/" target="_blank" rel="noopener noreferrer" class="">Cooperative Institute for Research to Operations in Hydrology (CIROH)</a> and our collective work in advancing water science. As one of CIROH's Ambassadors, I had the privilege of connecting with the broader scientific community at two key events: the <a href="https://www.ewricongress.org/" target="_blank" rel="noopener noreferrer" class="">Environmental and Water Resources Institute (EWRI) Congress</a> in Anchorage, Alaska, and the <a href="https://ciroh.ua.edu/devconference/2025-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class="">2025 CIROH Developers Conference</a> in Burlington, Vermont.</p>
-<!-- -->
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="empowering-the-community-at-the-2025-ciroh-developers-conference">Empowering the Community at the <a href="https://ciroh.ua.edu/devconference/2025-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class="">2025 CIROH Developers Conference</a><a href="http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab#empowering-the-community-at-the-2025-ciroh-developers-conference" class="hash-link" aria-label="Direct link to empowering-the-community-at-the-2025-ciroh-developers-conference" title="Direct link to empowering-the-community-at-the-2025-ciroh-developers-conference" translate="no">​</a></h3>
-<p>The annual <a href="https://ciroh.ua.edu/devconference/2025-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class=""><strong>CIROH Developers Conference</strong></a> is a premier three-day event that convenes hundreds of scientists, engineers, and software developers from across the consortium and its partner institutions. It serves as a vital hub for innovation and collaboration, where attendees engage with the latest research findings, project highlights, and hands-on workshops on cutting-edge tools, workflows, and methodologies.</p>
-<p>For me, this year's conference in the beautiful city of <a href="https://www.google.com/maps/place/Burlington,+VT/" target="_blank" rel="noopener noreferrer" class="">Burlington, Vermont</a>, felt like coming full circle, as it marked my one-year anniversary since joining the consortium through <a href="https://www.ua.edu/" target="_blank" rel="noopener noreferrer" class="">The University of Alabama</a>.</p>
-<p>I had the privilege of leading a <a href="https://github.com/skoriche/NGIAB-Calibration-DevCon25" target="_blank" rel="noopener noreferrer" class="">hands-on training workshop on hydrological model calibration</a>. It was a fantastic experience engaging with the talented developers, researchers, and scientists who are all dedicated to the advancement and acceleration of Community Water Resources Modeling. Our session provided comprehensive, hands-on guidance for calibrating one of core components of the NextGen National Water Model model-confifuration—specifically the <a href="https://github.com/NOAA-OWP/cfe" target="_blank" rel="noopener noreferrer" class="">Conceptial Functional Equivalent (CFE)</a> coupled with <a href="https://github.com/NOAA-OWP/noah-owp-modular" target="_blank" rel="noopener noreferrer" class="">Noah-OWP-Modular</a>—within the <a href="https://ngiab.ciroh.org/" target="_blank" rel="noopener noreferrer" class=""><strong>NextGen In A Box (NGIAB) ecosystem</strong></a>.</p>
-<p>The <a href="https://ngiab.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">NGIAB ecosystem</a> is a comprehensive platform that revolutionizes how we approach hydrological research with integrated capabilities for:</p>
-<ul>
-<li class="">✨ <strong>1. Data preprocessing</strong></li>
-<li class="">⚙️ <strong>2. Hydrology model simulations and calibration</strong></li>
-<li class="">📊 <strong>3. Advanced evaluation tools</strong></li>
-<li class="">📈 <strong>4. Rich visualization capabilities</strong></li>
-</ul>
-<p>A huge thank you to <a href="https://ciroh.ua.edu/" target="_blank" rel="noopener noreferrer" class="">CIROH</a> for organizing such an insightful conference, and to the <a href="https://www.uvm.edu/" target="_blank" rel="noopener noreferrer" class="">University of Vermont</a> for being an excellent host!</p>
-<!-- -->
-<p>For everyone who attended or is interested in learning more, all training materials, codes, and data from the workshop are openly available in our GitHub repository:</p>
-<p>➡️ <strong><a href="https://github.com/skoriche/NGIAB-Calibration-DevCon25" target="_blank" rel="noopener noreferrer" class="">NGIAB-Calibration-DevCon25 Workshop Materials</a></strong><br>
-<!-- -->➡️ <strong>More NextGen Workshops</strong>: <a class="" href="http://ciroh.org/staging/123/news">DocuHub News</a>; May 2025 Updates</p>
-<p>I'm inspired by the passion for innovation shown and look forward to seeing how the community leverages these tools to advance water modeling.</p>
-<p><img decoding="async" loading="lazy" alt="A speaker presents at a conference, with a large screen displaying presentation slides and organization logos." src="http://ciroh.org/staging/123/assets/images/Photo-DevCon2025-382da3028e559ae6994ea0d35240e243.png" width="4000" height="2252" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="disseminating-research-at-the-ewri-congress">Disseminating Research at the <a href="https://www.ewricongress.org/" target="_blank" rel="noopener noreferrer" class="">EWRI Congress</a><a href="http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab#disseminating-research-at-the-ewri-congress" class="hash-link" aria-label="Direct link to disseminating-research-at-the-ewri-congress" title="Direct link to disseminating-research-at-the-ewri-congress" translate="no">​</a></h3>
-<p>The EWRI Congress was a valuable opportunity to disseminate our research and connect with hundreds of engineers and scientists. I had the privilege of delivering three oral presentations that showcase the use-inspired science outcomes emerging from the CIROH Science and Technology Team and our partners.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-advancing-hydrologic-modeling-through-community-driven-development-the-nextgen-framework"><a href="https://github.com/CIROH-UA" target="_blank" rel="noopener noreferrer" class="">1. Advancing Hydrologic Modeling through Community-Driven Development: The NextGen Framework</a><a href="http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab#1-advancing-hydrologic-modeling-through-community-driven-development-the-nextgen-framework" class="hash-link" aria-label="Direct link to 1-advancing-hydrologic-modeling-through-community-driven-development-the-nextgen-framework" title="Direct link to 1-advancing-hydrologic-modeling-through-community-driven-development-the-nextgen-framework" translate="no">​</a></h4>
-<p>This <a href="https://alaska2025.eventscribe.net/fsPopup.asp?efp=SUlaTkJWTUEyNDE5NA&amp;PresentationID=1583570&amp;rnd=0.1763265&amp;mode=presInfo" target="_blank" rel="noopener noreferrer" class="">presentation</a> introduced the Community NextGen initiative, a collaborative effort aimed at fostering open innovation and accelerating the framework's development. These efforts aim to facilitate efficient research-to-operations (R2O) and operations-to-research (O2R) transitions, ultimately enhancing our ability to model and predict water resources at various scales.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-enhancing-catchment-based-hydrological-model-performance-through-dynamic-sub-discretization-using-land-surface-attributes"><a href="https://alaska2025.eventscribe.net/fsPopup.asp?PresentationID=1583638&amp;mode=presInfo" target="_blank" rel="noopener noreferrer" class="">2. Enhancing Catchment Based Hydrological Model Performance through Dynamic Sub-Discretization Using Land Surface Attributes</a><a href="http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab#2-enhancing-catchment-based-hydrological-model-performance-through-dynamic-sub-discretization-using-land-surface-attributes" class="hash-link" aria-label="Direct link to 2-enhancing-catchment-based-hydrological-model-performance-through-dynamic-sub-discretization-using-land-surface-attributes" title="Direct link to 2-enhancing-catchment-based-hydrological-model-performance-through-dynamic-sub-discretization-using-land-surface-attributes" translate="no">​</a></h4>
-<p>This talk addressed how the simplifications in lumped models can lead to reduced accuracy when applied uniformly in catchments with significant land-surface heterogeneity. The study explores the potential to enhance lumped model performance by introducing dynamic discretization based on key land-surface heterogeneities such as land use, soil type and soil layering, slope aspect, and elevation.</p>
-<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-multi-model-predictions-of-design-low-flow-conditions-in-the-great-salt-lake-basin-using-nextgen-water-resources-modeling-framework"><a href="https://alaska2025.eventscribe.net/fsPopup.asp?efp=SUlaTkJWTUEyNDE5NA&amp;PresentationID=1603025&amp;rnd=0.5338731&amp;mode=presInfo" target="_blank" rel="noopener noreferrer" class="">3. Multi-model Predictions of Design Low Flow Conditions in the Great Salt Lake Basin Using NextGen Water Resources Modeling Framework</a><a href="http://ciroh.org/staging/123/blog/ewri-devcon25-ngiab#3-multi-model-predictions-of-design-low-flow-conditions-in-the-great-salt-lake-basin-using-nextgen-water-resources-modeling-framework" class="hash-link" aria-label="Direct link to 3-multi-model-predictions-of-design-low-flow-conditions-in-the-great-salt-lake-basin-using-nextgen-water-resources-modeling-framework" title="Direct link to 3-multi-model-predictions-of-design-low-flow-conditions-in-the-great-salt-lake-basin-using-nextgen-water-resources-modeling-framework" translate="no">​</a></h4>
-<p>This research focused on the challenge of accurately estimating low flow conditions in ungauged basins, such as those in the Great Salt Lake (GSL) region. The study paves the way to investigate how different models perform in predicting design low flow, a critical standard for water supply planning, management, and ensuring water quality in the GSL basin at both gauged and ungauged locations.</p>
-<p>These works directly reflects the ongoing efforts and use-inspired science outcomes of the&nbsp;<a href="https://ngiab.ciroh.org/#:~:text=Alabama-,Water,-Institute" target="_blank" rel="noopener noreferrer" class="">CIROH&nbsp;Science and Technology Team and Partners across the consortium</a>. The congress served as a successful platform for showcasing these advancements and CIROH's leadership in community-driven, next-generation water resource prediction.</p>
-<p><img decoding="async" loading="lazy" alt="A speaker presents at the World Environmental &amp;amp; Water Resources Congress, with a large screen displaying presentation details and a &amp;#39;Say Cheese&amp;#39; graphic with a QR code." src="http://ciroh.org/staging/123/assets/images/EWRI-Koriche_MD-c223004f78849bdc7a5902671cc47ebf.png" width="3848" height="1900" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>Sifan A. Koriche</name>
-            <uri>https://github.com/skoriche</uri>
-        </author>
-        <category label="Blog" term="Blog"/>
-        <category label="CIROH" term="CIROH"/>
-        <category label="NOAA" term="NOAA"/>
-        <category label="Conference" term="Conference"/>
-        <category label="EWRI" term="EWRI"/>
-        <category label="National Water Model" term="National Water Model"/>
-        <category label="NGIAB" term="NGIAB"/>
-        <category label="NextGen" term="NextGen"/>
-        <category label="CIROH DevCon" term="CIROH DevCon"/>
-        <category label="Calibration" term="Calibration"/>
     </entry>
 </feed>
