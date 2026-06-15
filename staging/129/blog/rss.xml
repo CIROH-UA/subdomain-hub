@@ -4,10 +4,62 @@
         <title>CIROH Hub Blog</title>
         <link>http://ciroh.org/staging/129/blog</link>
         <description>CIROH Hub Blog</description>
-        <lastBuildDate>Fri, 24 Apr 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 May 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Continental-Scale Streamflow Simulation Using Kriging in the NGIAB-NRDS NextGen Ecosystem]]></title>
+            <link>http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds</link>
+            <guid>http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds</guid>
+            <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hourly streamflow kriging is now operational within the NextGen Research Data Stream, delivering spatially complete streamflow estimates for all NextGen v2.2 hydrofabric catchments across CONUS.]]></description>
+            <content:encoded><![CDATA[<p>Hourly streamflow kriging is now operational within the NextGen Research Data Stream, delivering spatially complete estimates for all NextGen v2.2 hydrofabric catchments. This observation-based approach supports streamflow analysis, NWM calibration, forecasting, and data assimilation for ungauged basins.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="kriging-based-streamflow-estimation">Kriging-Based Streamflow Estimation<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#kriging-based-streamflow-estimation" class="hash-link" aria-label="Direct link to Kriging-Based Streamflow Estimation" title="Direct link to Kriging-Based Streamflow Estimation" translate="no">​</a></h2>
+<p>Process-based hydrologic models are subject to structural and forcing uncertainties throughout the modeling domain, yet these can only be evaluated where USGS gauge observations exist. There is a clear need for a data-driven, observation-based framework that provides spatially complete streamflow estimates with well-characterized uncertainty, independent of model structure. Recent results from the CIROH project "Developing and Benchmarking Data Assimilation Methods on a Standardized Testbed" suggest that a simple Kriging interpolation between USGS gauged locations is both scalable and accurate for producing such spatially complete streamflow fields. As a pure data-driven method, this interpolation cannot be used directly for forecasting, but it serves as a valuable "pseudo-observation" for streamflow analysis and historical reconstruction.</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hourly-streamflow-kriging-across-conus">Hourly Streamflow Kriging Across CONUS<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#hourly-streamflow-kriging-across-conus" class="hash-link" aria-label="Direct link to Hourly Streamflow Kriging Across CONUS" title="Direct link to Hourly Streamflow Kriging Across CONUS" translate="no">​</a></h2>
+<p>Streamflow kriging effectively leverages spatial correlations in observations and has previously been implemented in the National Hydrologic Model for calibration and evaluation at daily timescales (<a href="https://ascelibrary.org/doi/10.1061/%28ASCE%29HE.1943-5584.0001854" target="_blank" rel="noopener noreferrer" class="">Farmer et al., 2019</a>). Here, we extend this approach to hourly resolution using instantaneous-value (IV) discharge records from approximately 7,300 active USGS gauges across CONUS. Instantaneous values are aggregated to hourly means, and variogram parameters are estimated using a spherical variogram model. These parameters drive gridded hourly interpolated runoff and kriging error variance fields across CONUS, which are then used to estimate distributed runoff at every catchment divide within the NextGen hydrofabric.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-into-the-nextgen-research-data-stream">Integration into the NextGen Research Data Stream<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#integration-into-the-nextgen-research-data-stream" class="hash-link" aria-label="Direct link to Integration into the NextGen Research Data Stream" title="Direct link to Integration into the NextGen Research Data Stream" translate="no">​</a></h2>
+<p>To make hourly kriging operationally available, we integrated it into the NextGen Research Data Stream (NRDS; <a href="https://github.com/CIROH-UA/ngen-datastream/issues/352" target="_blank" rel="noopener noreferrer" class="">ngen-datastream#352</a>). Kunal Sarna designed the software stack aligning the outputs in a long-format Brotli-compressed Parquet schema that downstream consumers such as T-Route expect, and built a Docker image packaging the kriging workflow (<code>docker.io/awiciroh/qkrig:2.2.0</code>). Harsha Vemula led and executed all aspects of deployment: configuring the AWS infrastructure, setting up the EventBridge schedule, provisioning and managing the nightly EC2 instance, orchestrating the end-to-end data pipeline and delivery of outputs to the NRDS status dashboard.</p>
+<p>The NRDS at CIROH-UA now runs qkrig as a first-class datastream, updating the previous 24 hourly estimates once per day. Each night at 00:30 ET, the pipeline:</p>
+<ol>
+<li class="">Fetches USGS instantaneous-value discharge for ~7,300 active gauges</li>
+<li class="">Fits an ordinary kriging field across CONUS at hourly resolution</li>
+<li class="">Samples the field at every NextGen v2.2 catchment centroid</li>
+</ol>
+<p>The full daily output — 24 hourly kriged NetCDFs and variograms, kriging plots and a daily GIF, and a single ~13 MB Parquet file covering all 831,777 catchments × 24 hours of streamflow — is published publicly at:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#F8F8F2"><span class="token plain">s3://ciroh-community-ngen-datastream/outputs/qkrig/qkrig.{YYYYMMDD}/</span><br></div></code></pre></div></div>
+<p>and tracked on the <a href="https://ciroh-community-ngen-datastream.s3.amazonaws.com/status/dashboard.html" target="_blank" rel="noopener noreferrer" class="">NRDS status dashboard</a> alongside other operational datastreams.</p>
+<p><img decoding="async" loading="lazy" alt="Hourly kriged streamflow and variogram across CONUS" src="http://ciroh.org/staging/129/assets/images/kriging-streamflow-variogram-5cec9d42d8a61dd51406a53132d6b814.gif" width="1600" height="879" class="img_ev3q"></p>
+<p><strong>Figure 1:</strong> Hourly kriged streamflow and variogram for the CONUS region, accessed from the NextGen Research Data Stream: <a href="https://datastream.ciroh.org/#outputs/qkrig/qkrig.20260519/plots/kriging/" target="_blank" rel="noopener noreferrer" class="">https://datastream.ciroh.org/#outputs/qkrig/qkrig.20260519/plots/kriging/</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streamflow-simulation-using-t-route">Streamflow Simulation Using T-Route<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#streamflow-simulation-using-t-route" class="hash-link" aria-label="Direct link to Streamflow Simulation Using T-Route" title="Direct link to Streamflow Simulation Using T-Route" translate="no">​</a></h2>
+<p>To evaluate the utility of kriging for generating spatially distributed runoff in ungauged basins, we interpolated runoff over the South Toe River hydrofabric by withholding observations from 20% of USGS gauges affected by Hurricane Helene in September 2024. The resulting kriged runoff was used to initialize T-Route, a river-routing engine developed by NOAA's Office of Water Prediction. Sonali Vyas implemented streamflow simulation with interpolated runoff at hydrofabric catchments using T-Route. Comparison of routed streamflow at the gauge outlet with observations showed that the kriging-initialized T-Route simulation captured both the peak timing and recession during Hurricane Helene. This demonstrates that combining streamflow kriging with T-Route is a viable approach for streamflow simulation (with lag times of 1–24 hours) in ungauged basins within the NextGen water resources modeling framework.</p>
+<p><img decoding="async" loading="lazy" alt="T-route simulation at South Toe River using kriged runoff" src="http://ciroh.org/staging/129/assets/images/t-route-south-toe-15e3bf247c499a8d6b14333e58e5b694.png" width="1625" height="1121" class="img_ev3q"></p>
+<p><strong>Figure 2:</strong> T-route simulation of streamflow initialized using held-out kriged runoff in the NextGen hydrofabric of the South Toe River.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>Hourly streamflow kriging is now operational within the NextGen Research Data Stream, delivering spatially complete estimates for all NextGen v2.2 hydrofabric catchments. This observation-based approach supports a broad range of potential applications including streamflow analysis and historical reconstruction, National Water Model calibration, streamflow forecasting, and data assimilation for ungauged basins.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="links">Links<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links" translate="no">​</a></h2>
+<ol>
+<li class=""><a href="https://github.com/DualEarth/qkrig" target="_blank" rel="noopener noreferrer" class="">GitHub repository — streamflow kriging (qkrig)</a></li>
+<li class=""><a href="https://github.com/sonalivyascse19-stack/t-route" target="_blank" rel="noopener noreferrer" class="">GitHub repository — T-route streamflow simulation with kriging</a></li>
+<li class=""><a href="https://datastream.ciroh.org/#outputs/qkrig/" target="_blank" rel="noopener noreferrer" class="">Streamflow analysis from kriging DataStream</a></li>
+<li class=""><a href="https://us-east-2.console.aws.amazon.com/s3/buckets/streamflow-interpolation-noaa14?region=us-east-2&amp;prefix=daily_kriging%2F&amp;showversions=false&amp;tab=objects" target="_blank" rel="noopener noreferrer" class="">Daily streamflow reanalysis dataset based on kriging</a></li>
+<li class=""><a href="https://us-east-2.console.aws.amazon.com/s3/buckets/streamflow-interpolation-noaa14?region=us-east-2&amp;prefix=hourly_kriging%2F&amp;showversions=false&amp;tab=objects" target="_blank" rel="noopener noreferrer" class="">Hourly streamflow reanalysis dataset based on kriging</a></li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="acknowledgements">Acknowledgements<a href="http://ciroh.org/staging/129/blog/continental-scale-streamflow-kriging-ngiab-nrds#acknowledgements" class="hash-link" aria-label="Direct link to Acknowledgements" title="Direct link to Acknowledgements" translate="no">​</a></h2>
+<p>Special thanks to Kunal Sarna and Harsha Vemula for collaborating and integrating hourly kriging into NRDS in 3 weeks.</p>
+<p>This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) through NOAA Cooperative Agreement NA22NWS4320003. CIROH cyberinfrastructure used: AWS S3 (daily and hourly streamflow reanalysis products from 1979–2025 WYs), EC2 (testing the kriging workflow in NRDS), and DataStream (hourly streamflow analysis outputs).</p>]]></content:encoded>
+            <category>NextGen</category>
+            <category>Kriging</category>
+            <category>Streamflow</category>
+            <category>NRDS</category>
+            <category>DataStream</category>
+            <category>NGIAB</category>
+            <category>AWS</category>
+            <category>T-Route</category>
+            <category>CONUS</category>
+        </item>
         <item>
             <title><![CDATA[TEEHR and CIROH Advance Cloud-Based Hydrologic Model Evaluation into a New Era]]></title>
             <link>http://ciroh.org/staging/129/blog/teehr-april-2026</link>
@@ -1226,82 +1278,6 @@ NGIAB has given the I-SMART team the tools to conduct their groundbreaking resea
             <category>Wukong</category>
             <category>Pantarhei</category>
             <category>On-Premises Services</category>
-        </item>
-        <item>
-            <title><![CDATA[DevCon 2025: Hydroinformatics and Research CyberInfrastructure Keynote]]></title>
-            <link>http://ciroh.org/staging/129/blog/devcon25-keynote</link>
-            <guid>http://ciroh.org/staging/129/blog/devcon25-keynote</guid>
-            <pubDate>Wed, 04 Jun 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Keynote Recap - CIROH Developers Conference 2025]]></description>
-            <content:encoded><![CDATA[<p>Last week, I had the incredible opportunity to co-present a keynote at the CIROH
-Developers Conference (DevCon 2025), which attracted over 200 attendees. This
-presentation, which I presented alongside Dan Ames, focused on "CIROH HydroInformatics
-and Research Cyberinfrastructure." It was a fantastic experience to share insights
-into the powerful tools and technologies that CIROH engineers, students, researchers
-have been developing to advance hydrological research and operations.</p>
-<div class="carousel-root" tabindex="0"><div class="carousel carousel-slider" style="width:100%"><ul class="control-dots"><li class="dot selected" value="0" role="button" tabindex="0" aria-label="slide item 1"></li><li class="dot" value="1" role="button" tabindex="0" aria-label="slide item 2"></li><li class="dot" value="2" role="button" tabindex="0" aria-label="slide item 3"></li><li class="dot" value="3" role="button" tabindex="0" aria-label="slide item 4"></li><li class="dot" value="4" role="button" tabindex="0" aria-label="slide item 5"></li><li class="dot" value="5" role="button" tabindex="0" aria-label="slide item 6"></li><li class="dot" value="6" role="button" tabindex="0" aria-label="slide item 7"></li><li class="dot" value="7" role="button" tabindex="0" aria-label="slide item 8"></li></ul><button type="button" aria-label="previous slide / item" class="control-arrow control-prev"></button><div class="slider-wrapper axis-horizontal"><ul class="slider animated" style="-webkit-transform:translate3d(-100%,0,0);-ms-transform:translate3d(-100%,0,0);-o-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);-webkit-transition-duration:350ms;-moz-transition-duration:350ms;-o-transition-duration:350ms;transition-duration:350ms;-ms-transition-duration:350ms"><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_7.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide selected previous"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_0.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_1.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_2.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_3.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_4.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_5.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_6.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_7.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li><li class="slide selected previous"><div style="display:flex;justify-content:center;align-items:center"><img src="http://ciroh.org/staging/129/img/blog/2025-06-devcon25/keynote_0.jpeg" style="width:auto;max-height:500px;border-radius:8px;box-shadow:0 4px 8px rgba(0, 0, 0, 0.1)" alt="Arpita Patel and Dan Ames presenting their plenary keynote at CIROH DevCon 2025."></div></li></ul></div><button type="button" aria-label="next slide / item" class="control-arrow control-next"></button></div></div>
-<br>
-<!-- -->
-<p>Our keynote aimed to showcase the comprehensive ecosystem that CIROH offers. We highlighted four key pillars:</p>
-<ul>
-<li class=""><strong>Computing Resources</strong>: CIROH offers accress to public cloud infrastructure, on-premises HPC, and NSF ACCESS resources.</li>
-<li class=""><strong>Data Management</strong>: CIROH members handle and share vast datasets crucial for hydrological modeling. We've provided platforms to do so through <a href="https://hydroshare.org/" target="_blank" rel="noopener noreferrer" class="">HydroShare</a> and CIROH AWS S3 buckets, as well as streamlining access and analysis of this data through tools like Google BigQuery API and Tethys Platform.</li>
-<li class=""><strong>Model Development</strong>: CIROH develops tools and frameworks for developing and refining hydrological models, including the <a href="https://ngiab.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">NGIAB ecosystem</a>.</li>
-<li class=""><strong>Knowledge Sharing</strong>: CIROH disseminates findings and best practices through the <a href="https://hub.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">DocuHub</a> and <a href="https://portal.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">Portal</a> platforms.</li>
-</ul>
-<div><div class="player-wrapper"><div style="width:100%;height:100%" class="react-player"></div></div><div class="centered-caption"><p><em>Slides are available here: <a href="http://ciroh.org/staging/129/assets/files/DevCon25-PlenaryKeyNote-Arpita-Dan-67d90820666d6780a04b5512bc0572df.pdf" target="_blank" class="">View slideshow</a></em></p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="value-and-impact">Value and Impact<a href="http://ciroh.org/staging/129/blog/devcon25-keynote#value-and-impact" class="hash-link" aria-label="Direct link to Value and Impact" title="Direct link to Value and Impact" translate="no">​</a></h2>
-<p>During the keynote, we emphasized the value that CIROH brings to new students and researchers. This includes access to:</p>
-<ul>
-<li class="">Computational resources (free for researchers) that would normally cost thousands of dollars.</li>
-<li class="">Datasets that would take months to compile.</li>
-<li class="">Tools that streamline research and increase its impact.</li>
-<li class="">Publications - <a href="https://portal.ciroh.org/publications" target="_blank" rel="noopener noreferrer" class="">https://portal.ciroh.org/publications</a></li>
-</ul>
-<h1>CIROH Ecosystem Tools</h1>
-<p>We also showcased several transformative tools within the CIROH ecosystem that are advancing the field of hydrology:</p>
-<ul>
-<li class=""><strong>NGIAB (NextGen In A Box) ecosystem</strong> (<a href="https://ngiab.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">ngiab.ciroh.org</a>): Revolutionizes water modeling by making the NextGen framework portable and accessible through containerized, open-source solutions.</li>
-<li class=""><strong>CIROH Hub</strong> (<a href="https://hub.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">hub.ciroh.org</a>): Your comprehensive knowledge center featuring technical documentation, monthly insights, and the latest developments in water science.</li>
-<li class=""><strong>CIROH Portal</strong> (<a href="https://portal.ciroh.org/" target="_blank" rel="noopener noreferrer" class="">portal.ciroh.org</a>): A unified gateway connecting researchers to essential data, cutting-edge tools, and collaborative research opportunities.</li>
-<li class=""><strong>Google BigQuery NWM API</strong> (<a href="https://hub.ciroh.org/docs/products/Data%20Management%20and%20Access%20Tools/bigquery-api/" target="_blank" rel="noopener noreferrer" class="">Documentation</a>): Streamlines National Water Model data access with powerful cloud-based querying capabilities for efficient analysis.</li>
-<li class=""><strong>Tethys Platform</strong>: Transforms complex hydrological data and models into intuitive web applications, making advanced water science accessible to all stakeholders.</li>
-<li class=""><strong>AWS, Google Cloud, 2i2c JupyterHub and NSF Access</strong>: CIROH's AWS, Google Cloud accounts, CIROH 2i2c JupyuterHub and NSF Allocations for cloud computing in hydrology.</li>
-<li class=""><strong>Pantarhei and Wukong HPC</strong>: CIROH's state-of-the-art high-performance computing infrastructure, powering computationally intensive research and simulations.</li>
-<li class="">And many more innovative solutions driving water science forward!</li>
-</ul>
-<p>Our overall message was that CIROH’s hydroinformatics and research cyberinfrastructure
-ecosystem is designed to support and amplify research efforts. We encouraged attendees
-to explore these resources and consider how they could be applied to their own work.
-Whether it's streamlining data workflows, tackling computationally intensive tasks,
-or sharing findings, CIROH provides the tools and infrastructure to push the boundaries
-of hydrological science.</p>
-<p>We want to thank everyone who attended our keynote and engaged in the Mentimeter quiz.
-It’s an exciting time for CIROH, and we’re thrilled to be a part of this dynamic community!</p>
-<div class="player-wrapper"><div style="width:100%;height:100%" class="react-player"></div></div>
-<blockquote>
-<p><em>Video voiced by Quinn Lee and prepared by Manjila Singh, Nia Minor, and Arpita Patel.</em></p>
-</blockquote>]]></content:encoded>
-            <category>Blog</category>
-            <category>CIROH</category>
-            <category>Conference</category>
-            <category>CIROH DevCon</category>
-            <category>Flood Inundation Mapping</category>
-            <category>National Water Model</category>
-            <category>NGIAB</category>
-            <category>NextGen</category>
-            <category>Services</category>
-            <category>NSF</category>
-            <category>NSF Access</category>
-            <category>2i2c</category>
-            <category>JetStream2</category>
-            <category>AWS</category>
-            <category>Google Cloud</category>
-            <category>NextGen Datastream</category>
-            <category>Tethys Platform</category>
-            <category>On-Premises Services</category>
-            <category>DocuHub</category>
-            <category>CIROH Portal</category>
         </item>
     </channel>
 </rss>
