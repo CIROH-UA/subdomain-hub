@@ -9,18 +9,16 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Powering DevCon 2026: How CIROH and 2i2c Ran Cloud Computing at Scale]]></title>
+            <title><![CDATA[Powering CIROH DevCon 2026: How CIROH and 2i2c Ran Cloud Computing at Scale]]></title>
             <link>http://ciroh.org/staging/140/blog/devcon26-infra</link>
             <guid>http://ciroh.org/staging/140/blog/devcon26-infra</guid>
             <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Our Research Cyberinfrastructure team provisioned cloud resources for 15 hands-on workshops across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.]]></description>
-            <content:encoded><![CDATA[<p>When developers, students, and researchers filed into the hands-on workshops at the
-<a href="https://ciroh.ua.edu/devconference-2026-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class="">2026 CIROH Developers Conference</a>
-(University of Utah, May 27–29), nearly every one of them was, within minutes, running real hydrologic
-code on cloud infrastructure they'd never had to install, configure, or even think about. Behind that
-seamless experience, our Research Cyberinfrastructure team provisioned cloud resources for
-<strong>15 hands-on workshops</strong> across three days — in close collaboration with our partners at 2i2c.
-Here's what we ran, and how.</p>
+            <content:encoded><![CDATA[<p>At the <a href="https://ciroh.ua.edu/devconference-2026-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class="">2026 CIROH Developers Conference</a>
+(University of Utah, May 27–29) participants used real hydrologic code on cloud infrastructure
+they'd never had to install, configure, or even think about. To enable that seamless experience,
+our Research Cyberinfrastructure team provisioned cloud resources for <strong>15 hands-on workshops</strong>
+across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-we-provisioned-by-the-numbers">What we provisioned, by the numbers<a href="http://ciroh.org/staging/140/blog/devcon26-infra#what-we-provisioned-by-the-numbers" class="hash-link" aria-label="Direct link to What we provisioned, by the numbers" title="Direct link to What we provisioned, by the numbers" translate="no">​</a></h2>
 <p>Running an event of this scale requires more than just a single cloud context, as each workshop posed
 its own computing and data access requirements. CIROH Cyberinfrastructure met this challenge via a
@@ -63,7 +61,7 @@ ready and consistent on day one, demonstrating clear evidence of how tightly the
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hydroshare-integration-from-a-resource-to-a-running-notebook">HydroShare integration: from a resource to a running notebook<a href="http://ciroh.org/staging/140/blog/devcon26-infra#hydroshare-integration-from-a-resource-to-a-running-notebook" class="hash-link" aria-label="Direct link to HydroShare integration: from a resource to a running notebook" title="Direct link to HydroShare integration: from a resource to a running notebook" translate="no">​</a></h2>
 <p>Many workshop materials were published as HydroShare resources and launched straight into the Workshop Hub via a single link, pulling notebooks and data into the user's environment automatically. What might otherwise have been an onerous process of managing cluttered Downloads folders and local directory structures was instead compressed into a single click.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-the-2i2c-partnership-matters">Why the 2i2c partnership matters<a href="http://ciroh.org/staging/140/blog/devcon26-infra#why-the-2i2c-partnership-matters" class="hash-link" aria-label="Direct link to Why the 2i2c partnership matters" title="Direct link to Why the 2i2c partnership matters" translate="no">​</a></h2>
-<p>It would be easy to describe 2i2c as "the company that runs our JupyterHub," but that undersells it. 2i2c specializes in open-source cloud infrastructure for research, and that shared commitment shapes how we work. Our entire stack — JupyterHub, the container images, the HydroShare connector — is open source and lives in public repositories. Another institution could read our Dockerfile and stand up something similar.</p>
+<p>2i2c's significance in this process went far beyond just hosting the JupyterHub. 2i2c specializes in open-source cloud infrastructure for research, and that shared commitment shaped our collaboration. Our entire stack — JupyterHub, the container images, the HydroShare connector — is open source and lives in public repositories. Another institution could easily read our Dockerfiles or dependency configurations to launch similar environments.</p>
 <p>The operational model matters too. 2i2c manages JupyterHubs for many science communities, and what they learn from one community gets shared quickly with others. Our pre-conference testing and prep was informed by dashboards 2i2c built for EarthScope's computing-intense workshops, and the temporary storage approach 2i2c and CIROH used at DevCon is now being re-used with other communities (including EarthScope).</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lessons-were-carrying-forward">Lessons we're carrying forward<a href="http://ciroh.org/staging/140/blog/devcon26-infra#lessons-were-carrying-forward" class="hash-link" aria-label="Direct link to Lessons we're carrying forward" title="Direct link to Lessons we're carrying forward" translate="no">​</a></h2>
 <p><strong>Pre-event automation is everything.</strong> Nine custom images don't build themselves on the morning of a workshop. Front-loading that work meant we could focus on people, not infrastructure, during the event.</p>
