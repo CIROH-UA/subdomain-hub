@@ -15,7 +15,7 @@
             <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Our Research Cyberinfrastructure team provisioned cloud resources for 15 hands-on workshops across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.]]></description>
             <content:encoded><![CDATA[<p>At the <a href="https://ciroh.ua.edu/devconference-2026-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class="">2026 CIROH Developers Conference</a>
-(University of Utah, May 27–29) participants used real hydrologic code on cloud infrastructure
+(University of Utah, May 27–29) participants used a variety of tools and models on cloud infrastructure
 they'd never had to install, configure, or even think about. To enable that seamless experience,
 our Research Cyberinfrastructure team provisioned cloud resources for <strong>15 hands-on workshops</strong>
 across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.</p>
@@ -41,6 +41,15 @@ and 2i2c deployed them. By the time attendees arrived, the right libraries were 
 loop of haggling with installations and configurations that “work on my machine”. Instead, there were reproducible environments,
 ready and consistent on day one, demonstrating clear evidence of how tightly the CIROH and 2i2c teams work together.</p>
 <figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/140/img/blog/2026-06-devcon/devcon26-usage.png" width="100%" alt="A line graph showing usage of CIROH-2i2c JupyerHub environments over time. A spike in usage occurs on May 27th, peaking on the 27th at 132 workshop users, before leveling back off to near-zero levels after the conference's end on June 1st."><figcaption><em>During DevCon, as many as 132 participants were logged into CIROH-2i2c JupyterHub per day.</em></figcaption></figure>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ccnh-instant-access-to-nextgen-in-jupyterhub">CCNH: Instant Access to NextGen in JupyterHub<a href="http://ciroh.org/staging/140/blog/devcon26-infra#ccnh-instant-access-to-nextgen-in-jupyterhub" class="hash-link" aria-label="Direct link to CCNH: Instant Access to NextGen in JupyterHub" title="Direct link to CCNH: Instant Access to NextGen in JupyterHub" translate="no">​</a></h2>
+<p>Two of the twelve workshops also marked the first appearance of the
+<a href="https://hub.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/" target="_blank" rel="noopener noreferrer" class=""><strong>CIROH Community NextGen Hub</strong> (<strong>CCNH</strong>)</a>
+at a DevCon event! This JupyterHub image contains all of the dependencies
+required to run the NextGen Framework, bypassing the framework's notorious
+complexity. CCNH represents a new paradigm where the NextGen framework can
+be run entirely from the comfort of a web browser, further extending its
+accessibility and expanding the potential for research and development with
+the framework.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="devcon-2026-workshops-using-ciroh-cyberinfrastructure">DevCon 2026 workshops using CIROH Cyberinfrastructure<a href="http://ciroh.org/staging/140/blog/devcon26-infra#devcon-2026-workshops-using-ciroh-cyberinfrastructure" class="hash-link" aria-label="Direct link to DevCon 2026 workshops using CIROH Cyberinfrastructure" title="Direct link to DevCon 2026 workshops using CIROH Cyberinfrastructure" translate="no">​</a></h2>
 <ul>
 <li class=""><strong><a href="https://github.com/CIROH-UA/NGIAB-CloudInfra/issues/463" target="_blank" rel="noopener noreferrer" class="">#463 — Hands-on LSTM and Transformer for Operational Streamflow Prediction</a></strong> (Penn State): Brings state-of-the-art deep-learning sequence models into an operational streamflow forecasting workflow. This workshop made use of <strong>2i2c GPU servers</strong> to enable its cutting-edge approach.</li>
