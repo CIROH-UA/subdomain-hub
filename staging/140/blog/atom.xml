@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://ciroh.org/staging/140/blog</id>
     <title>CIROH Hub Blog</title>
-    <updated>2026-06-24T00:00:00.000Z</updated>
+    <updated>2026-06-29T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://ciroh.org/staging/140/blog"/>
     <subtitle>CIROH Hub Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[Powering CIROH DevCon 2026: How CIROH and 2i2c Ran Cloud Computing at Scale]]></title>
         <id>http://ciroh.org/staging/140/blog/devcon26-infra</id>
         <link href="http://ciroh.org/staging/140/blog/devcon26-infra"/>
-        <updated>2026-06-24T00:00:00.000Z</updated>
+        <updated>2026-06-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Our Research Cyberinfrastructure team provisioned cloud resources for 15 hands-on workshops across three days in close collaboration with our partners at 2i2c. Here's what we ran, and how.]]></summary>
         <content type="html"><![CDATA[<p>At the <a href="https://ciroh.ua.edu/devconference-2026-ciroh-developers-conference/" target="_blank" rel="noopener noreferrer" class="">2026 CIROH Developers Conference</a>
 (University of Utah, May 27–29) participants used a variety of tools and models on cloud infrastructure
@@ -39,7 +39,7 @@ we defined those environments in our public <a href="https://github.com/CIROH-UA
 and 2i2c deployed them. By the time attendees arrived, the right libraries were already in place, all but eliminating the usual
 loop of haggling with installations and configurations that “work on my machine”. Instead, there were reproducible environments,
 ready and consistent on day one, demonstrating clear evidence of how tightly the CIROH and 2i2c teams work together.</p>
-<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/140/img/blog/2026-06-devcon/devcon26-usage.png" width="100%" alt="A line graph showing usage of CIROH-2i2c JupyerHub environments over time. A spike in usage occurs on May 27th, peaking on the 27th at 132 workshop users, before leveling back off to near-zero levels after the conference's end on June 1st."><figcaption><em>During DevCon, as many as 132 participants were logged into CIROH-2i2c JupyterHub per day.</em></figcaption></figure>
+<figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/140/img/blog/2026-06-devcon/devcon26-usage.png" width="100%" alt="A line graph showing usage of CIROH-2i2c JupyterHub environments over time. A spike in usage occurs on May 27th, peaking on the 27th at 132 workshop users, before leveling back off to near-zero levels after the conference's end on June 1st."><figcaption><em>During DevCon, as many as 132 participants were logged into CIROH-2i2c JupyterHub per day.</em></figcaption></figure>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ccnh-instant-access-to-nextgen-in-jupyterhub">CCNH: Instant Access to NextGen in JupyterHub<a href="http://ciroh.org/staging/140/blog/devcon26-infra#ccnh-instant-access-to-nextgen-in-jupyterhub" class="hash-link" aria-label="Direct link to CCNH: Instant Access to NextGen in JupyterHub" title="Direct link to CCNH: Instant Access to NextGen in JupyterHub" translate="no">​</a></h2>
 <p>Two of the twelve workshops also marked the first appearance of the
 <a href="https://hub.ciroh.org/docs/products/ngiab/distributions/nextgen-2i2c/" target="_blank" rel="noopener noreferrer" class=""><strong>CIROH Community NextGen Hub</strong> (<strong>CCNH</strong>)</a>
@@ -74,11 +74,11 @@ the framework.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lessons-were-carrying-forward">Lessons we're carrying forward<a href="http://ciroh.org/staging/140/blog/devcon26-infra#lessons-were-carrying-forward" class="hash-link" aria-label="Direct link to Lessons we're carrying forward" title="Direct link to Lessons we're carrying forward" translate="no">​</a></h2>
 <p><strong>Pre-event automation is everything.</strong> Nine custom images don't build themselves on the morning of a workshop. Front-loading that work meant we could focus on people, not infrastructure, during the event.</p>
 <p><strong>Treat infrastructure as tracked engineering.</strong> Thirteen GitHub issues turned a sprawling set of requests into an auditable plan — and a head start on next year.</p>
-<p><strong>Reproducibility scales.</strong> Version-controlled environment images are the difference between 15 consistent workshops and 15 individual troubleshooting sessions — and they let any of these workshops be re-run on the mainline [NM2.1]2i2c JupyterHub environment.</p>
+<p><strong>Reproducibility scales.</strong> Version-controlled environment images are the difference between 15 consistent workshops and 15 individual troubleshooting sessions — and they let any of these workshops be re-run on the mainline (NM2.1) 2i2c JupyterHub environment.</p>
 <p><strong>Open-source, public-private partnerships work.</strong> Corporate cloud providers (AWS/Google Cloud), an NSF-funded computing resource, a mission-driven infrastructure partner with 2i2c, and a university research institute (CIROH) all contributed aspects of the DevCon experience. The result was a unified experience across every workshop. That's the model we want to keep building on.</p>
 <p>To our partners at 2i2c, and to the providers and resources that backed DevCon 2026: thank you. To our DevCon networking sponsors — Lynker, Google Cloud, Civil and Environmental Engineering at The University of Utah — thank you.</p>
 <p>And to everyone who logged in, ran the notebooks, and pushed their work forward — that's exactly what this infrastructure is for.</p>
-<p>Interested in CIROH's cloud resources? Learn more at <a class="" href="http://ciroh.org/staging/140/docs/services">hub.ciroh.org/docs/services</a> or reach the CIROH Cyberinfrastructure team at <a href="mailto:ciroh-it-support@ua.edu" target="_blank" rel="noopener noreferrer" class="">ciroh-it-support@ua.edu</a>.</p>]]></content>
+<p>Interested in CIROH's cloud resources? Learn more at <a class="" href="http://ciroh.org/staging/140/docs/services/intro">hub.ciroh.org/docs/services/intro</a> or reach the CIROH Cyberinfrastructure team at <a href="mailto:ciroh-it-support@ua.edu" target="_blank" rel="noopener noreferrer" class="">ciroh-it-support@ua.edu</a>.</p>]]></content>
         <author>
             <name>Arpita Patel</name>
             <uri>https://github.com/arpita0911patel</uri>
