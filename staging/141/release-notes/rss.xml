@@ -4,7 +4,7 @@
         <title>CIROH Hub Blog</title>
         <link>http://ciroh.org/staging/141/release-notes</link>
         <description>CIROH Hub Blog</description>
-        <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 29 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[06-24-2026 Release Notes]]></title>
             <link>http://ciroh.org/staging/141/release-notes/v20260624</link>
             <guid>http://ciroh.org/staging/141/release-notes/v20260624</guid>
-            <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Major CIROH Hub update for June!]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="blog-posts-and-news-updates">Blog posts and news updates<a href="http://ciroh.org/staging/141/release-notes/v20260624#blog-posts-and-news-updates" class="hash-link" aria-label="Direct link to Blog posts and news updates" title="Direct link to Blog posts and news updates" translate="no">​</a></h2>
 <ul>
@@ -21,6 +21,7 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content">New Content<a href="http://ciroh.org/staging/141/release-notes/v20260624#new-content" class="hash-link" aria-label="Direct link to New Content" title="Direct link to New Content" translate="no">​</a></h2>
 <ul>
+<li class="">Added new Events portal (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/125" target="_blank" rel="noopener noreferrer" class="">#125</a>)</li>
 <li class="">Added many new tutorials to Pantarhei documentation (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/136" target="_blank" rel="noopener noreferrer" class="">#136</a>)</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="http://ciroh.org/staging/141/release-notes/v20260624#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
