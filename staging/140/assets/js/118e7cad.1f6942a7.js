@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkciroh_docuhub=self.webpackChunkciroh_docuhub||[]).push([["12446"],{5258(e){e.exports=JSON.parse('{"metadata":{"permalink":"/staging/140/release-notes","page":1,"postsPerPage":27,"totalPages":1,"totalCount":27,"blogDescription":"A quick glance at what\'s new in CIROH Hub.","blogTitle":"CIROH Hub release notes!"}}')}}]);
