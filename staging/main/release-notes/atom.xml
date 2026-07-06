@@ -8,22 +8,22 @@
     <subtitle>CIROH Hub Blog</subtitle>
     <icon>http://ciroh.org/staging/main/img/logos/CIROH_Hub_logo.png</icon>
     <entry>
-        <title type="html"><![CDATA[06-24-2026 Release Notes]]></title>
-        <id>http://ciroh.org/staging/main/release-notes/v20260624</id>
-        <link href="http://ciroh.org/staging/main/release-notes/v20260624"/>
+        <title type="html"><![CDATA[06-29-2026 Release Notes]]></title>
+        <id>http://ciroh.org/staging/main/release-notes/v20260629</id>
+        <link href="http://ciroh.org/staging/main/release-notes/v20260629"/>
         <updated>2026-06-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Major CIROH Hub update for June!]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="blog-posts-and-news-updates">Blog posts and news updates<a href="http://ciroh.org/staging/main/release-notes/v20260624#blog-posts-and-news-updates" class="hash-link" aria-label="Direct link to Blog posts and news updates" title="Direct link to Blog posts and news updates" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="blog-posts-and-news-updates">Blog posts and news updates<a href="http://ciroh.org/staging/main/release-notes/v20260629#blog-posts-and-news-updates" class="hash-link" aria-label="Direct link to Blog posts and news updates" title="Direct link to Blog posts and news updates" translate="no">​</a></h2>
 <ul>
 <li class="">New blog post: <a class="" href="http://ciroh.org/staging/main/blog/devcon26-infra">Powering CIROH DevCon 2026: How CIROH and 2i2c Ran Cloud Computing at Scale</a> (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/140" target="_blank" rel="noopener noreferrer" class="">#140</a>)</li>
 <li class="">Community NextGen News update: June 2026 Release (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/141" target="_blank" rel="noopener noreferrer" class="">#141</a>)</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content">New Content<a href="http://ciroh.org/staging/main/release-notes/v20260624#new-content" class="hash-link" aria-label="Direct link to New Content" title="Direct link to New Content" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content">New Content<a href="http://ciroh.org/staging/main/release-notes/v20260629#new-content" class="hash-link" aria-label="Direct link to New Content" title="Direct link to New Content" translate="no">​</a></h2>
 <ul>
 <li class="">Added new Events portal (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/125" target="_blank" rel="noopener noreferrer" class="">#125</a>)</li>
 <li class="">Added many new tutorials to Pantarhei documentation (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/136" target="_blank" rel="noopener noreferrer" class="">#136</a>)</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="http://ciroh.org/staging/main/release-notes/v20260624#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="http://ciroh.org/staging/main/release-notes/v20260629#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
 <ul>
 <li class="">Updated 2i2c documentation regarding custom images (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/128" target="_blank" rel="noopener noreferrer" class="">#128</a>, <a href="https://github.com/CIROH-UA/ciroh_hub/pull/143" target="_blank" rel="noopener noreferrer" class="">#143</a>)</li>
 <li class="">Added image and thumbnail viewer to Publications page (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/131" target="_blank" rel="noopener noreferrer" class="">#131</a>)</li>
