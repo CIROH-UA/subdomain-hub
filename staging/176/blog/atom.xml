@@ -31,8 +31,10 @@ not have to. The CIROH cyberinfrastructure team carried that load.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-framework-fits-in-the-box">The framework fits in the Box<a href="http://ciroh.org/staging/176/blog/summer-institute-flash-flood#the-framework-fits-in-the-box" class="hash-link" aria-label="Direct link to The framework fits in the Box" title="Direct link to The framework fits in the Box" translate="no">​</a></h2>
 <p>NextGen is powerful but challenging to run. NextGen In A Box (NGIAB), CIROH's containerized
 distribution with more than 41,000 Docker pulls, turns that setup problem into a single pull
-command. However, the teams did more than just run it. NGIAB is also an <em>open</em> box, and this
-year's Summer Institute teams took full advantage by extending it:</p>
+command. This year's Summer Institute members were able to hit the ground running after
+just a single one-hour NGIAB workshop, demonstrating its sheer accessibility.</p>
+<p>However, the teams did more than just run it. NGIAB is also an <em>open</em> box, and they took full
+advantage by extending it:</p>
 <ul>
 <li class=""><strong>FlashCast</strong> built a modified NGIAB Docker image that runs CFE and T-Route on a 15 minute
 timestep and forced it with 15 minute MRMS radar rainfall, expanding the framework's standard
