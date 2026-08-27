@@ -23,8 +23,8 @@ make or break the prediction.</p>
 <strong>Advancing the Use of Quantitative Precipitation Inputs into the NextGen Framework</strong>. Ten graduate
 students in three teams (Don't Runoff!, FlashCast, and The Post-Processors) had seven weeks to bring
 sub-hourly radar rainfall, precipitation uncertainty, and ensemble forecasting methods into the
-NextGen Water Resources Modeling Framework. Seven weeks is not much. The teams could not spend half
-of it compiling a modeling framework or downloading terabytes of radar data to laptops, and they did
+NextGen Water Resources Modeling Framework. Seven weeks is not much, and the teams could not spend half
+of it compiling a modeling framework or downloading terabytes of radar data to laptops. Fortunately, they did
 not have to. The CIROH cyberinfrastructure team carried that load.</p>
 <figure style="text-align:center"><img src="http://ciroh.org/staging/176/img/blog/2026-08-summer-institute/dont-runoff-team.png" width="100%" alt="Team Don't Runoff! members Leo Lonzarich, Azizur Rahman, and Jessica Keiser."><figcaption><em>Team Don't Runoff! (left to right): Leo Lonzarich, Azizur Rahman, Jessica Keiser.</em></figcaption></figure>
 <figure style="text-align:center"><img src="http://ciroh.org/staging/176/img/blog/2026-08-summer-institute/flashcast-team.png" width="100%" alt="Team FlashCast members Alex Lastner, Danna Villarreal, and Bikas Gupta."><figcaption><em>Team FlashCast (left to right): Alex Lastner, Danna Villarreal, Bikas Gupta.</em></figcaption></figure>
@@ -32,22 +32,23 @@ not have to. The CIROH cyberinfrastructure team carried that load.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-framework-fits-in-the-box">The framework fits in the Box<a href="http://ciroh.org/staging/176/blog/summer-institute-flash-flood#the-framework-fits-in-the-box" class="hash-link" aria-label="Direct link to The framework fits in the Box" title="Direct link to The framework fits in the Box" translate="no">​</a></h2>
 <p>NextGen is powerful but challenging to run. NextGen In A Box (NGIAB), CIROH's containerized
 distribution with more than 41,000 Docker pulls, turns that setup problem into a single pull
-command. What made NGIAB matter at the Summer Institute was that the box is open. The teams did
-not just run it. They extended it:</p>
+command. However, the teams did more than just run it. NGIAB is also an <em>open</em> box, and this
+year's Summer Institute teams took full advantage by extending it:</p>
 <ul>
 <li class=""><strong>FlashCast</strong> built a modified NGIAB Docker image that runs CFE and T-Route on a 15 minute
 timestep and forced it with 15 minute MRMS radar rainfall, expanding the framework's standard
 hourly configuration to the sub-hourly scales flash floods demand.</li>
 <li class=""><strong>The Post-Processors</strong> modified the NGIAB data preprocess library so NextGen could ingest MRMS
-radar estimates and HRRR forecast rainfall in place of the default AORC forcing, then simulated
+radar estimates and HRRR forecast rainfall in place of the default AORC forcing. They then simulated
 8,474 catchments around Ellicott City, Maryland.</li>
 <li class=""><strong>Don't Runoff!</strong> built a volume-preserving workflow that maps 2 minute, 1 km MRMS rainfall onto
-NextGen Hydrofabric catchments, and used it to drive dHBV2-Flash, a new sub-hourly differentiable
+NextGen Hydrofabric catchments and used it to drive dHBV2-Flash, a new sub-hourly differentiable
 model designed for the framework.</li>
 </ul>
 <p>Every modification lives in a container or a public repository. Any researcher can pull the same
-image, rerun the same experiment, and build on it. That is the point of the box. For the complete
-set of shared resources, see each team's final report.</p>
+image, rerun the same experiment, and build on it. That is the point of the box: NGIAB enables
+maximal portability and reproducibility to maximize research's impact. For the complete set of shared
+resources, see each team's <a href="https://www.hydroshare.org/resource/7b2b22d88a914bb79b3f48e5ea3ecaaf/" target="_blank" rel="noopener noreferrer" class="">final report</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="r2ohc-platform-nsf-jetstream2-and-ngiab-did-the-heavy-lifting">R2OHC Platform: NSF Jetstream2 and NGIAB did the heavy lifting<a href="http://ciroh.org/staging/176/blog/summer-institute-flash-flood#r2ohc-platform-nsf-jetstream2-and-ngiab-did-the-heavy-lifting" class="hash-link" aria-label="Direct link to R2OHC Platform: NSF Jetstream2 and NGIAB did the heavy lifting" title="Direct link to R2OHC Platform: NSF Jetstream2 and NGIAB did the heavy lifting" translate="no">​</a></h2>
 <p>None of this fits on a laptop. FlashCast alone ran 2,280 simulation scenarios per basin across
 three flash flood case studies (Asheville NC, Pittsburgh PA, and Kerrville TX) — 6,840 NextGen runs
@@ -55,28 +56,37 @@ in total. The Post-Processors pushed 500 synthetic storms through NGIAB to train
 surrogate, on top of storm displacement experiments across thousands of catchments. Don't Runoff!
 processed radar rainfall for over 5,000 flash flood events across the country and trained a
 differentiable model on years of 15-minute data.</p>
-<p>The computing resources came from CIROH cyberinfrastructure — NSF Jetstream2 allocations, the
-NSF-funded academic cloud, through CIROH's ACCESS allocation (EES240087), with virtual machines
+<p>The computing resources came from CIROH cyberinfrastructure, which provided allocations on
+<a class="" href="http://ciroh.org/staging/176/docs/services/external-resources/nsf-access/jetstream">NSF Jetstream2</a>, Indiana University's
+NSF-funded academic cloud, through CIROH's ACCESS allocation (EES240087). JetStream2 hosted virtual machines
 sized for each team's workload, from batch NGIAB runs to model training. The rainfall came from
 NOAA open data: 2-minute MRMS radar estimates, hourly AORC forcings, and HRRR forecasts, all pulled
-straight from public cloud archives. CUAHSI HydroShare closed the loop as the publication home for
-datasets and supplementary materials, and the NWC-CUAHSI-Summer-Institute GitHub organization hosts
-the code.</p>
+straight from public cloud archives. <a href="https://www.hydroshare.org/" target="_blank" rel="noopener noreferrer" class="">CUAHSI HydroShare</a>
+closed the loop as the publication home for datasets and supplementary materials, and the
+<a href="https://github.com/nwc-cuahsi-summer-institute" target="_blank" rel="noopener noreferrer" class="">NWC-CUAHSI-Summer-Institute GitHub organization</a>
+hosts the code.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-teams-built">What the teams built<a href="http://ciroh.org/staging/176/blog/summer-institute-flash-flood#what-the-teams-built" class="hash-link" aria-label="Direct link to What the teams built" title="Direct link to What the teams built" translate="no">​</a></h2>
-<p><strong>Team Don't Runoff!</strong> delivered RUNOFF v1.0, a CONUS-scale catalog of over 5,000 flash flood
+<p><strong>Team Don't Runoff!</strong> delivered <a href="https://nwc-cuahsi-summer-institute.github.io/runoff/" target="_blank" rel="noopener noreferrer" class="">RUNOFF v1.0</a>,
+a CONUS-scale catalog of over 5,000 flash flood
 events from the NOAA Storm Events Database, each mapped to hydrofabric catchments and paired with a
 USGS gauge and quality-controlled MRMS rainfall. RUNOFF is designed to conduct flash flood modeling
-experiments using high-quality precipitation estimates. They also delivered dHBV2-Flash, a
+experiments using high-quality precipitation estimates. They also delivered
+<a href="https://github.com/NWC-CUAHSI-Summer-Institute/dhbv2-flash" target="_blank" rel="noopener noreferrer" class="">dHBV2-Flash</a>, a
 15-minute differentiable rainfall-runoff model that captured event peaks in the Upper Neuse basin
-with a median peak flow bias of 16% across 1,132 events. Supplementary materials are on HydroShare.</p>
+with a median peak flow bias of 16% across 1,132 events. Supplementary materials are on
+<a href="https://hydroshare.org/resource/761d02556fbe4100809e17eaef44edd9/" target="_blank" rel="noopener noreferrer" class="">HydroShare</a>.</p>
 <p><strong>Team FlashCast</strong> addressed a question at the heart of flash flood prediction: how fine, and how
-accurate, does the precipitation input need to be? Their sensitivity pipeline converts thousands of
+accurate, does the precipitation input need to be? Their
+<a href="https://github.com/NWC-CUAHSI-Summer-Institute/nextgen_spatiotemporal_sensitivity" target="_blank" rel="noopener noreferrer" class="">sensitivity pipeline</a>
+converts thousands of
 NGIAB runs into critical uncertainty matrices, the precipitation uncertainty a forecast can tolerate
 before predictions stop being actionable. Early results from the three case studies point to a
 scale-dependent answer: for these events, resolution finer than about 7 km and 1 hour added little
 on its own, as long as storm volume was preserved. The pipeline is built to put that threshold to
-the test across many more basins and storms. Methods and figures are on HydroShare.</p>
-<p><strong>The Post-Processors</strong> built NCET, the Neighboring Catchment Ensemble Technique, which turns a
+the test across many more basins and storms. Methods and figures are on
+<a href="https://www.hydroshare.org/resource/96f00a9eaef44b3ba4c00ddb24f70087/" target="_blank" rel="noopener noreferrer" class="">HydroShare</a>.</p>
+<p><strong>The Post-Processors</strong> built <a href="https://github.com/NWC-CUAHSI-Summer-Institute/NCET-data-preprocess" target="_blank" rel="noopener noreferrer" class="">NCET</a>,
+the Neighboring Catchment Ensemble Technique, which turns a
 single deterministic NextGen simulation into an ensemble streamflow forecast by borrowing
 hydrographs from neighboring catchments. Applied to the May 2018 Ellicott City flash flood with a
 real HRRR forecast, NCET recovered a flood the deterministic forecast missed, with the largest gains
@@ -86,13 +96,15 @@ it points to a computationally inexpensive path toward flash flood forecasting w
 team also prototyped Replace and Route, a BMI component that lets NextGen borrow discharge from
 high-fidelity external models at hydrofabric nexus points. Evaluation materials are on HydroShare.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="from-asking-research-questions-to-prototyping-workflows-in-seven-weeks">From asking research questions to prototyping workflows, in seven weeks<a href="http://ciroh.org/staging/176/blog/summer-institute-flash-flood#from-asking-research-questions-to-prototyping-workflows-in-seven-weeks" class="hash-link" aria-label="Direct link to From asking research questions to prototyping workflows, in seven weeks" title="Direct link to From asking research questions to prototyping workflows, in seven weeks" translate="no">​</a></h2>
-<p>Each product is hydrofabric-native, open, and packaged the way the NextGen ecosystem expects:
-containers, BMI modules, and reproducible pipelines. That is research to operations in miniature,
+<p>Each product is <a class="" href="http://ciroh.org/staging/176/docs/products/ngiab-ecosystem/dependencies/hydrofabric/">hydrofabric</a>-native,
+open, and packaged into containers, BMI modules, and reproducible pipelines — the way that the
+Community NextGen ecosystem expects. This ease of access and reuse is research to operations in miniature,
 and it is what CIROH cyberinfrastructure is for. NGIAB collapsed setup time from weeks to minutes.
 NSF's Jetstream2 scaled experiments beyond what any student laptop could run. Open data archives fed
 the models, and HydroShare and GitHub made every result citable and reusable. The students arrived
 with research questions. They left behind open prototypes, datasets, and code for the community to
 build on.</p>
+<hr>
 <!-- -->
 <p>The teams thank the CIROH Cyberinfrastructure &amp; DevOps team and Hydroinformatics team at the
 Alabama Water Institute (Arpita Patel, Josh Cunningham, Quinn Lee, Nia Minor, and colleagues) for
