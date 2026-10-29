@@ -13,17 +13,18 @@
             <link>http://ciroh.org/staging/210/release-notes/v20261029</link>
             <guid>http://ciroh.org/staging/210/release-notes/v20261029</guid>
             <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Minor CIROH Hub update for October!]]></description>
+            <description><![CDATA[Major CIROH Hub update for October!]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="blog-posts-and-news-updates">Blog posts and news updates<a href="http://ciroh.org/staging/210/release-notes/v20261029#blog-posts-and-news-updates" class="hash-link" aria-label="Direct link to Blog posts and news updates" title="Direct link to Blog posts and news updates" translate="no">​</a></h2>
 <ul>
 <li class="">Community NextGen News update: October 2026 Release (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/210" target="_blank" rel="noopener noreferrer" class="">#210</a>)</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content">New Content<a href="http://ciroh.org/staging/210/release-notes/v20261029#new-content" class="hash-link" aria-label="Direct link to New Content" title="Direct link to New Content" translate="no">​</a></h2>
 <ul>
-<li class="">Added "CIROH Hub (Development)" to Documentation section, providing insight into how Hub works (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/190" target="_blank" rel="noopener noreferrer" class="">#190</a>)</li>
+<li class="">Research Portal pages that pull from HydroShare now support on-site resource editing (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/203" target="_blank" rel="noopener noreferrer" class="">#203</a>)</li>
 <li class="">Publications page now offers weekly and monthly mailing lists (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/204" target="_blank" rel="noopener noreferrer" class="">#204</a>)</li>
 <li class="">Added feedback button sitewide (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/204" target="_blank" rel="noopener noreferrer" class="">#204</a>)</li>
 <li class="">Extended reports now added to Working Groups page (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/207" target="_blank" rel="noopener noreferrer" class="">#207</a>, <a href="https://github.com/CIROH-UA/ciroh_hub/pull/209" target="_blank" rel="noopener noreferrer" class="">#209</a>)</li>
+<li class="">Added "CIROH Hub (Development)" to Documentation section (<a href="https://github.com/CIROH-UA/ciroh_hub/pull/190" target="_blank" rel="noopener noreferrer" class="">#190</a>)</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updates">Updates<a href="http://ciroh.org/staging/210/release-notes/v20261029#updates" class="hash-link" aria-label="Direct link to Updates" title="Direct link to Updates" translate="no">​</a></h2>
 <ul>
