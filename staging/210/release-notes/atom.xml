@@ -30,6 +30,7 @@
 <li class="">Improved error handling when Research Portal pages fail to load (#199)[<a href="https://github.com/CIROH-UA/ciroh_hub/pull/199" target="_blank" rel="noopener noreferrer" class="">https://github.com/CIROH-UA/ciroh_hub/pull/199</a>]</li>
 <li class="">Publication submissions now provide a clear success message when completed (#202)[<a href="https://github.com/CIROH-UA/ciroh_hub/pull/202" target="_blank" rel="noopener noreferrer" class="">https://github.com/CIROH-UA/ciroh_hub/pull/202</a>]</li>
 <li class="">Emphasized support email links across Cyberinfrastructure section (#210)[<a href="https://github.com/CIROH-UA/ciroh_hub/pull/210" target="_blank" rel="noopener noreferrer" class="">https://github.com/CIROH-UA/ciroh_hub/pull/210</a>]</li>
+<li class="">Added fallback thumbnail for HydroShare resources (#211)[<a href="https://github.com/CIROH-UA/ciroh_hub/pull/211" target="_blank" rel="noopener noreferrer" class="">https://github.com/CIROH-UA/ciroh_hub/pull/211</a>]</li>
 </ul>
 ]]></content>
         <category label="Release Notes" term="Release Notes"/>
