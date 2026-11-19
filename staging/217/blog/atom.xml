@@ -24,11 +24,12 @@ to trust and assess the data, reproduce the process of creating or
 performing operations over the dataset, and have the knowledge to take
 full advantage of the available tools that fulfill these needs.</p>
 <figure style="text-align:center"><img class="dark-mode-white-bg" src="http://ciroh.org/staging/217/assets/images/figure1-f7d12752346f52474ce985592ea29c86.jpg" width="100%" alt="A bridge with multiple breaks is shown, crossing between buildings labeled &quot;hydrologic research&quot; and &quot;operational water management&quot;. The gaps are labeled as Access, Trust, Reproducibility, and Experise. A label spanning the broken bridge posits that hydroinformatics bridging is needed."><figcaption><em>Figure 1 from Ames et al.: "Bridging hydrologic research and operational water management. Four persistent gaps, Access, Trust, Reproducibility, and Expertise, hinder the translation of model predictions into actionable intelligence. Although these gaps present challenges, they are not impassable. This paper reviews how the CIROH community is systematically shrinking each gap, making the bridge even more readily traversable."</em></figcaption></figure>
-<p><a href="https://hub.ciroh.org/working-groups/hydroinformatics" target="_blank" rel="noopener noreferrer" class="">CIROH's Hydroinformatics Working Group</a>
-has aimed to address these challenges through the development of improved
+<p>CIROH researchers across the <a class="" href="http://ciroh.org/staging/217/working-groups/hydroinformatics">Hydroinformatics</a>,
+<a class="" href="http://ciroh.org/staging/217/working-groups/fim">FIM</a>, and <a class="" href="http://ciroh.org/staging/217/working-groups/community-resources">Community Resources</a>
+working groups have aimed to address these challenges through the development of improved
 architectures for data retrieval, evaluation tools, software organization,
-and accessibility. This November, they published their efforts in the
-Journal of the American Water Resources Association as
+and accessibility. This November, these researchers published the
+consortium's efforts in the Journal of the American Water Resources Association as
 "<a href="https://onlinelibrary.wiley.com/doi/10.1111/1752-1688.70161" target="_blank" rel="noopener noreferrer" class="">Bridging the Research-to-Operations Gaps in NOAA Water Prediction Through
 Advances in Hydroinformatics</a>".
 This publication validates the importance of this important work, as well
@@ -37,24 +38,20 @@ as making these advances fully visible to the broader hydrologic community.</p>
 <p>Quote from an author?</p>
 </blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="access-getting-data-to-where-its-needed">Access: Getting Data to Where It's Needed<a href="http://ciroh.org/staging/217/blog/jawra-r2o-gaps#access-getting-data-to-where-its-needed" class="hash-link" aria-label="Direct link to Access: Getting Data to Where It's Needed" title="Direct link to Access: Getting Data to Where It's Needed" translate="no">​</a></h2>
-<blockquote>
 <p>Todo.</p>
-</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="trust-streamlining-evaluation-and-verification">Trust: Streamlining Evaluation and Verification<a href="http://ciroh.org/staging/217/blog/jawra-r2o-gaps#trust-streamlining-evaluation-and-verification" class="hash-link" aria-label="Direct link to Trust: Streamlining Evaluation and Verification" title="Direct link to Trust: Streamlining Evaluation and Verification" translate="no">​</a></h2>
-<blockquote>
 <p>Todo.</p>
-</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reproducibility-untethering-research-from-the-lab">Reproducibility: Untethering Research From the Lab<a href="http://ciroh.org/staging/217/blog/jawra-r2o-gaps#reproducibility-untethering-research-from-the-lab" class="hash-link" aria-label="Direct link to Reproducibility: Untethering Research From the Lab" title="Direct link to Reproducibility: Untethering Research From the Lab" translate="no">​</a></h2>
-<blockquote>
 <p>Todo.</p>
-</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="expertise-using-tools-to-their-fullest">Expertise: Using Tools to Their Fullest<a href="http://ciroh.org/staging/217/blog/jawra-r2o-gaps#expertise-using-tools-to-their-fullest" class="hash-link" aria-label="Direct link to Expertise: Using Tools to Their Fullest" title="Direct link to Expertise: Using Tools to Their Fullest" translate="no">​</a></h2>
-<blockquote>
 <p>Todo.</p>
-</blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="closing-thoughts">Closing Thoughts<a href="http://ciroh.org/staging/217/blog/jawra-r2o-gaps#closing-thoughts" class="hash-link" aria-label="Direct link to Closing Thoughts" title="Direct link to Closing Thoughts" translate="no">​</a></h2>
-<blockquote>
 <p>Todo.</p>
+<blockquote>
+<p><em>Original paper written by Daniel P. Ames, Sagy Cohen, Patrick J. Clemins, Ibrahim Demir, James Halgren, Jeffery S. Horsburgh, E. James Nelson, Arpita Patel, Jordan S. Read, Nathan Swain, and David G. Tarboton.</em></p>
+</blockquote>
+<blockquote>
+<p>Ames, D. P., S. Cohen, P. J. Clemins, et al. 2026. “Bridging the Research-to-Operations Gaps in NOAA Water Prediction Through Advances in Hydroinformatics.” <em>JAWRA Journal of the American Water Resources Association</em> 62, no. 6: e70161. <a href="https://doi.org/10.1111/1752-1688.70161" target="_blank" rel="noopener noreferrer" class="">https://doi.org/10.1111/1752-1688.70161</a>.</p>
 </blockquote>]]></content>
         <author>
             <name>Dan Ames</name>
@@ -67,6 +64,10 @@ as making these advances fully visible to the broader hydrologic community.</p>
         <author>
             <name>Patrick Clemins</name>
             <uri>https://www.uvm.edu/water/profile/patrick-clemins</uri>
+        </author>
+        <author>
+            <name>Arpita Patel</name>
+            <uri>https://github.com/arpita0911patel</uri>
         </author>
         <author>
             <name>Nia Minor</name>
